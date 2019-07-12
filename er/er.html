@@ -3507,7 +3507,7 @@ All changes were controlled and vetted by the editors of the OGC API specificati
 <p>A fourth objective of the hackathon was to validate work that has been completed to date. The successful implementation, by multiple different organisations, of the OGC API specifications supported the validation of the prior work (i.e. the approach taken for the various OGC API specifications). The hackathon also provided the opportunity to invalidate or rethink specific aspects of some of the specifications. The fact that the different specifications extended the OGC API - Common specification, supports the view that the approach taken for organizing and structuring the OGC API specifications was validated by the hackathon. This confirms that the fourth objective of the hackathon was also met.</p>
 </div>
 <div class="paragraph">
-<p>A fifth objective of the hackathon was to contribute to the GitHub repositories. <a href="#img_commits">Figure 9</a> presents the total number of commits made to Github repositories for OGC APIs for Processes, Map Tiles, Common and Coverages. <a href="#img_issues">Figure 8</a> presents the total number of issues made to Github repositories for OGC APIs for Processes, Map Tiles, Common and Coverages. The commits and issues of the lead up to the hackathon and during the hackathon confirm that the fifth objective of the hackathon was also met.</p>
+<p>A fifth objective of the hackathon was to contribute to the GitHub repositories. <a href="#img_commits">Figure 9</a> presents the total number of commits made to Github repositories for OGC APIs for Processes, Map Tiles, Common and Coverages. <a href="#img_issues">Figure 8</a> presents the total number of issues made to Github repositories for OGC APIs for Processes, Map Tiles, Common and Coverages. The commits and issues from the lead up to the hackathon and during the hackathon confirm that the fifth objective of the hackathon was also met.</p>
 </div>
 <div class="paragraph">
 <p>This subsection has reflected on all of the objectives of the hackathon and confirmed that they were all met. The next section identifies lessons learnt from holding the hackathon.</p>
@@ -4524,27 +4524,21 @@ In particular:</p>
 <div class="sect2">
 <h3 id="GeoLabs"><a class="anchor" href="#GeoLabs"></a>A.23. GeoLabs</h3>
 <div class="paragraph">
-<p><a href="http://www.geolabs.fr" class="bare">http://www.geolabs.fr</a></p>
-</div>
-<div class="paragraph">
-<p>GeoLabs is a high-tech SME providing geospatial management solutions world-wide based on open source technologies. GeoLabs is leading the development of numerous open source geospatial projects and provides SaaS/PaaS services for geospatial data. GeoLabs has developed MapMint (mapmint.com), a complete web based web mapping infrastructure, participated in the development of geoportail.fr, the development of the Senegal’s National Cadastre. Further, it provides commercial cloud-based GIS services, and contributes in numerous open source projects.</p>
+<p>GeoLabs (<a href="http://www.geolabs.fr" class="bare">http://www.geolabs.fr</a>) is a world-wide provider of geospatial management solutions based on open source technologies. GeoLabs is involved in the development of numerous open source geospatial projects, as well as providing Software-as-a-Service (SaaS) and Platform-as-a-Service (PaaS) solutions for geospatial data. GeoLabs has developed MapMint (mapmint.com), a complete web based web mapping infrastructure, participated in the development of geoportail.fr, and the development of Senegal’s National Cadastre. Further, GeoLabs provides commercial cloud-based GIS services, and contributes in numerous open source projects.</p>
 </div>
 <div class="sect3">
 <h4 id="_motivation_to_participate_24"><a class="anchor" href="#_motivation_to_participate_24"></a>A.23.1. Motivation to Participate</h4>
 <div class="paragraph">
-<p>Get more informations about the directions followed by the working groups for the different standards. Get answer to some questions we got about the Processes api specifically. Indeed, as we implemented part of (or should I say adaptation of)  the wps-rest-binding before attending the hackathon, we were facing some issue in trying mimicing the different options available in WPS 2.0 and, we would like to discuss with other to see their point of view and share ours.</p>
+<p>The motivation for GeoLabs was to get more information about the direction followed by the working groups for the different standards, as well as to get answers to some questions that GeoLabs had about the OGC API - Processes specification. Indeed, GeoLabs implemented part of the OGC API - Processes specification before attending the hackathon and encountered some issues in trying to mimic the different options available in WPS 2.0. The hackathon therefore provided an opportunity for GeoLabs to discuss and share experiences with participants from other organizations.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_implemented_solution_23"><a class="anchor" href="#_implemented_solution_23"></a>A.23.2. Implemented Solution</h4>
 <div class="paragraph">
-<p>We came with the ZOO-Project implementation demonstration swagger interface available at: <a href="https://demo.mapmint.com/swagger-ui/dist/" class="bare">https://demo.mapmint.com/swagger-ui/dist/</a> for interracting with two WPS instances available at: <a href="http://demo.mapmint.com/WPS2/" class="bare">http://demo.mapmint.com/WPS2/</a> and  <a href="http://demo.mapmint.com/WPS3/" class="bare">http://demo.mapmint.com/WPS3/</a> (where WPS2 is using the model available on the opengeospatial github repository when the second one is made based on the tests we have made to change the wps-rest-binding and atempt to make it fitting the current WPS 2.0 defintions).</p>
+<p>GeoLabs came to the hackathon with the ZOO-Project implementation demonstration swagger interface available at: <a href="https://demo.mapmint.com/swagger-ui/dist/" class="bare">https://demo.mapmint.com/swagger-ui/dist/</a> for interacting with two instances based on the OGC API - Processes specification. The instances are available at: <a href="http://demo.mapmint.com/WPS2/" class="bare">http://demo.mapmint.com/WPS2/</a> and  <a href="http://demo.mapmint.com/WPS3/" class="bare">http://demo.mapmint.com/WPS3/</a> (where the former is using the model available on the <a href="https://github.com/opengeospatial/wps-rest-binding">wps-rest-binding</a> repository and the latter one is based on the tests GeoLabs made to change the wps-rest-binding, in order to make it fit the current WPS 2.0 definitions).</p>
 </div>
 <div class="paragraph">
-<p>This WPS implementation is based on the one available at <a href="http://www.zoo-project.org" class="bare">http://www.zoo-project.org</a> with some modifications.</p>
-</div>
-<div class="paragraph">
-<p>As it is based on an implementation able to offer access to libraries and applications such as GDAL, OGR, GEOS, PROJ,  the Orfeo ToolBox (<a href="https://www.orfeo-toolbox.org/" class="bare">https://www.orfeo-toolbox.org/</a>) and the SAGA-GIS application. The demonstration include numerous services available to be run using the wps-rest-binding.</p>
+<p>This implementation of the OGC API - Processes specification is based on the one available at <a href="http://www.zoo-project.org" class="bare">http://www.zoo-project.org</a> with some modifications. It is based on an implementation that is able to offer access to libraries and applications such as GDAL, OGR, GEOS, PROJ,  the Orfeo ToolBox (<a href="https://www.orfeo-toolbox.org/" class="bare">https://www.orfeo-toolbox.org/</a>) and the SAGA-GIS application. The demonstration includes numerous services available to be run using the implementation of the OGC API - Processes specification.</p>
 </div>
 </div>
 <div class="sect3">
@@ -4574,8 +4568,8 @@ In particular:</p>
 <div class="sect3">
 <h4 id="_motivation_to_participate_25"><a class="anchor" href="#_motivation_to_participate_25"></a>A.24.1. Motivation to Participate</h4>
 <div class="paragraph">
-<p>The Motivation behind creating GeoSeer was to help solve the discoverability problem. End users often find it difficult to find the services or data that exists. GeoSeer&#8217;s participation was an extension of this seeking to facilitate making life easier for finding data through the new OGC API Specifications, or at least to ensure it did not get even harder.
-In fact team behind GeoSeer suggests that discovery is one of the aspects that could be improved in current OGC services and should be getting more consideration in the new OGC API specifications.</p>
+<p>The Motivation behind creating GeoSeer was to help solve the discoverability problem. End users often find it difficult to find the services or data that exists. GeoSeer&#8217;s participation was an extension of this seeking to facilitate making life easier for finding data through the new OGC API specifications, or at least to ensure it did not get even harder.
+In fact, the team behind GeoSeer suggests that discovery is one of the aspects that could be improved in current OGC services and should be getting more consideration in the new OGC API specifications.</p>
 </div>
 </div>
 <div class="sect3">
@@ -4593,7 +4587,7 @@ In fact team behind GeoSeer suggests that discovery is one of the aspects that c
 <div class="sect3">
 <h4 id="_experiences_with_ogc_api_specifications_24"><a class="anchor" href="#_experiences_with_ogc_api_specifications_24"></a>A.24.4. Experiences with OGC API Specifications</h4>
 <div class="paragraph">
-<p>The OGC API specifications all seem quite interesting, though the concept of "collections" took some getting used to and remains somewhat confusing. This suggests they may not be as intuitive as could be desired and users may struggle with it.</p>
+<p>For GeoSeer, the OGC API specifications all seem quite interesting, though the concept of "collections" took some getting used to and remains somewhat confusing. This suggests that collections may not be as intuitive as could be desired and users may struggle with the concept.</p>
 </div>
 <div class="paragraph">
 <p>In relation to discoverability:</p>
@@ -4614,7 +4608,7 @@ In fact team behind GeoSeer suggests that discovery is one of the aspects that c
 <div class="sect4">
 <h5 id="_issues"><a class="anchor" href="#_issues"></a>Issues</h5>
 <div class="paragraph">
-<p>A number of potential discoverability issues were identified with the current specification.</p>
+<p>A number of potential discoverability issues with the current specifications were identified by GeoSeer. The issues include:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -4625,16 +4619,16 @@ In fact team behind GeoSeer suggests that discovery is one of the aspects that c
 <p>There may be too much reliance on extensions. Many deployers will NOT install extensions even if they should. For example, the data for services that claim to be compliant to Implementing Rules of the European Union&#8217;s INSPIRE directive shows that only around half of the services actually have the INSPIRE ExtendedCapabilities. And that is for something that INSPIRE says is mandatory. An extension for "discovery" would therefore not provide its peak usefulness unless its components were in core.</p>
 </li>
 <li>
-<p>The "Title", and "Description", fields are both optional in Core, and Features/Maps as far as we can see. These fields should be mandatory. If they are not they will not be there for many services and that will make them considerably less discoverable. It will also significantly reduce usability with desktop GIS (imagine selecting a feature collection when none of them have these&#8230;&#8203;).</p>
+<p>The "Title", and "Description", fields are both optional in the Common, Features and Map Tiles specifications. These fields should be mandatory. If they are not they will not be there for many services and that will make them considerably less discoverable. It will also significantly reduce usability with desktop GIS (imagine selecting a feature collection when none of them have these&#8230;&#8203;).</p>
 </li>
 <li>
-<p>There should be a mandatory BBOX in WGS84 in Core required for each collection. This will facilitate discovery of spatial data - "WHERE" being critical to such data. There are many thousands of "tree" datasets out there for instance, how can a user otherwise know where the data is without this? Some wording to allow exclusion for non-spatial datasets could be incorporated. This could be in addition to a native BBOX defined by the extensions as necessary.</p>
+<p>There should be a mandatory Bounding Box (BBOX) in WGS84, required for each collection, in the OGC API - Common specification. This will facilitate discovery of spatial data - "WHERE" being critical to such data. There are many thousands of "tree" datasets out there for instance, how can a user otherwise know where the data is without this? Some wording to allow exclusion for non-spatial datasets could be incorporated. This could be in addition to a native BBOX defined by the extensions as necessary.</p>
 </li>
 <li>
-<p>Metadata url should be included too. While GeoSeer were no big fan of external metadata documents, many large organisations find them extremely important and they are used a fair percentage on current services. A consistent way to specify them would make access to this information automatically easier.</p>
+<p>Metadata URLs should be included too. While GeoSeer were no big fan of external metadata documents, many large organizations find them extremely important and they are used a fair percentage on current services. A consistent way to specify them would make access to this information automatically easier.</p>
 </li>
 <li>
-<p>GeoSeer would like to highlight that if something is not explicitly specified in the OGC API specifications and instead relies on the deployer deciding what/how to implement it (as has been suggested with Keywords), this obviates much of the benefit of a standard. Even <strong>with</strong> standards, developers end up finding many different ways to do things! Without standards the number of ways to do things just makes life extremely difficult for anyone who wishes to automate access to services. Never rely on the deployers/implementers being consistent.</p>
+<p>GeoSeer would like to highlight that if something is not explicitly specified in the OGC API specifications and instead relies on the deployer deciding what/how to implement it (as has been suggested with Keywords), this obviates much of the benefit of a standard. Even <strong>with</strong> standards, developers end up finding many different ways to do things! Without standards the number of ways to do things just makes life extremely difficult for anyone who wishes to automate access to services. It is advisable not to rely on the deployers/implementers being consistent.</p>
 </li>
 </ul>
 </div>
@@ -4761,18 +4755,18 @@ In fact team behind GeoSeer suggests that discovery is one of the aspects that c
 <div class="sect2">
 <h3 id="HelyxSIS"><a class="anchor" href="#HelyxSIS"></a>A.28. Helyx SIS</h3>
 <div class="paragraph">
-<p>TBA</p>
+<p>Helyx SIS is a professional services company that specialises in the provision of information management and information exploitation, as well as the provision of geospatial information services and solutions. Amongst its professional services, Helyx also undertakes innovation and applied research for customers.</p>
 </div>
 <div class="sect3">
 <h4 id="_motivation_to_participate_29"><a class="anchor" href="#_motivation_to_participate_29"></a>A.28.1. Motivation to Participate</h4>
 <div class="paragraph">
-<p>TBA</p>
+<p>As well as being an active participant on multiple OGC initiatives, e.g. testbeds, Helyx is also a provider of services to various government departments that are also members of the OGC.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_implemented_solution_28"><a class="anchor" href="#_implemented_solution_28"></a>A.28.2. Implemented Solution</h4>
 <div class="paragraph">
-<p>TBA</p>
+<p>Helyx prototyped an implementation of a routing profile of the OGC API - Processes specification, with potential application in transportation.</p>
 </div>
 </div>
 <div class="sect3">
@@ -4797,21 +4791,18 @@ In fact team behind GeoSeer suggests that discovery is one of the aspects that c
 <div class="sect2">
 <h3 id="Hexagon"><a class="anchor" href="#Hexagon"></a>A.29. Hexagon</h3>
 <div class="paragraph">
-<p>Hexagon is a global leader in sensor, software and autonomous solutions. We are putting data to work to boost efficiency, productivity, and quality across industrial, manufacturing, infrastructure, safety, and mobility applications. Our technologies are shaping urban and production ecosystems to become increasingly connected and autonomous — ensuring a scalable, sustainable future.</p>
-</div>
-<div class="paragraph">
-<p>Within Hexagon Geospatial, we create solutions that visualize location intelligence. From the desktop to the browser to the edge, we bridge the divide between the geospatial and the operational worlds.</p>
+<p>Hexagon is a provider of sensor, software and autonomous solutions that work to boost efficiency, productivity, and quality across industrial, manufacturing, infrastructure, safety, and mobility applications. Hexagon technologies are helping to shape urban and production ecosystems to become increasingly connected and autonomous — ensuring a scalable, sustainable future. Hexagon Geospatial creates solutions that visualize location intelligence, bridging the divide between the geospatial and operational worlds.</p>
 </div>
 <div class="sect3">
 <h4 id="_motivation_to_participate_30"><a class="anchor" href="#_motivation_to_participate_30"></a>A.29.1. Motivation to Participate</h4>
 <div class="paragraph">
-<p>Hexagon Geospatial has been an active supporter of OGC and OGC standards for many years. Next to implementing a wide range of OGC standards, we have ample experience in applying OGC standards within industry solutions for a variety of domains, such as Aviation, Defense &amp; Intelligence, Maritime, Transportation, Mining or Disaster Management. By being part of many testbeds and interoperability experiments the past decade and contributing numerous software components and engineering reports, we also learned that cooperation with other people on real-world use cases is an excellent way of testing and improving specifications. Hexagon Geospatial is motivated to share its expertise as long-term implementer and user to support the advancements of OGC standards related to map tiles, coverages and processes.</p>
+<p>Hexagon Geospatial has been an active supporter of OGC and OGC standards for many years. Next to implementing a wide range of OGC standards, Hexagon Geospatial have ample experience in applying OGC standards within industry solutions for a variety of domains, such as Aviation, Defense &amp; Intelligence, Maritime, Transportation, Mining or Disaster Management. By being part of many testbeds and interoperability experiments over the past decade and contributing numerous software components and engineering reports, Hexagon Geospatial also learned that cooperation with other people on real-world use cases is an excellent way of testing and improving specifications. Hexagon Geospatial is motivated to share its expertise as a long-term implementer and user to support the advancements of OGC standards related to map tiles, coverages and processes.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_implemented_solution_29"><a class="anchor" href="#_implemented_solution_29"></a>A.29.2. Implemented Solution</h4>
 <div class="paragraph">
-<p>We implemented a desktop Java-based fat client to experiment with the Map Tiles API. The client retrieved data from the server provided by EsriUK, accessing the maps using the tile-based approach.</p>
+<p>A desktop Java-based client was implemented by Hexagon Geospatial to experiment with the OGC API - Map Tiles specification. The client retrieved data from the server provided by Esri UK, accessing the maps using the tile-based approach.</p>
 </div>
 <div class="paragraph">
 <p>Interesting about the client implementation is that it started from <code>/collections/{collectionId}</code> and used the provided metadata to look up the appropriate tile matrix set from <code>/tileMatrixSets/{tileMatrixSetId}</code>. Now that the tile structure was known, the client used <code>/collections/{collectionId}/tiles/{styleId}/{tileMatrixSetId}/&#8230;&#8203;</code> to get the actual tile data. Note that the specification was still evolving and there was no <code>map/</code> before <code>{styleId}/</code> yet.</p>
@@ -4841,13 +4832,13 @@ In fact team behind GeoSeer suggests that discovery is one of the aspects that c
 <div class="sect3">
 <h4 id="_proposed_alternatives_29"><a class="anchor" href="#_proposed_alternatives_29"></a>A.29.3. Proposed Alternatives</h4>
 <div class="paragraph">
-<p>We raised some questions related to the consistency and duplication in various parts of the metadata in the API.</p>
+<p>A number of questions were raised in relation to consistency and duplication in various parts of the metadata in the API.</p>
 </div>
 <div class="paragraph">
-<p>We participated in the discussions about composability of the tiling scheme on top of collections or maps.</p>
+<p>Hexagon Geospatial participated in the discussions about composition of the tiling scheme on top of collections or maps.</p>
 </div>
 <div class="paragraph">
-<p>We noted that there seems to be an opportunity for having more concepts in the Common API. Specifically, it seems that <em>extent</em> could be in there.</p>
+<p>It was noted that there seems to be an opportunity for having more concepts in the Common API. Specifically, it seems that <em>extent</em> could be included.</p>
 </div>
 <div class="paragraph">
 <p>When generating a map depicting multiple collections, the request will probably get quite complex. Perhaps it is useful to think of such a map as a composition of multiple single-collection maps. The multiple-collection map request could perhaps refer to multiple single-collection maps?</p>
@@ -4856,16 +4847,16 @@ In fact team behind GeoSeer suggests that discovery is one of the aspects that c
 <div class="sect3">
 <h4 id="_experiences_with_ogc_api_specifications_29"><a class="anchor" href="#_experiences_with_ogc_api_specifications_29"></a>A.29.4. Experiences with OGC API Specifications</h4>
 <div class="paragraph">
-<p>The Hexagon Geospatial product portfolios applied OGC standards from the start and currently implement more than a dozen OGC standards and candidate standards, including implementations of WFS, WMS, WCS, WMTS, WPS, CSW, GeoPackage, Filter Encoding, SLD / SE, GML, KML, 3D Tiles and NetCDF.</p>
+<p>The Hexagon Geospatial product portfolios applied OGC standards from the start and currently implements more than a dozen OGC standards and candidate standards, including implementations of WFS, WMS, WCS, WMTS, WPS, CSW, GeoPackage, Filter Encoding, SLD / SE, GML, KML, 3D Tiles and NetCDF.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_other_impressions_recommendations_29"><a class="anchor" href="#_other_impressions_recommendations_29"></a>A.29.5. Other Impressions &amp; Recommendations</h4>
 <div class="paragraph">
-<p>It is very good to hear that OGC is trying to make the APIs more easily consumable by users. However, and perhaps specifically to the Map Tiles, the variety of use cases and access patterns still leads to considerable complexity, for instance by having request parameters related to parts of the URL path.</p>
+<p>Hexagon Geospatial sees as a positive development that OGC is trying to make the APIs more easily consumable by users. However, and perhaps specifically to the Map Tiles specification, the variety of use cases and access patterns still leads to considerable complexity, for instance by having request parameters related to parts of the URL path.</p>
 </div>
 <div class="paragraph">
-<p>We believe the hackaton was useful to get a feel for the practicality of the proposed APIs. However, when each group goes off to work on their specification separately, it is easy for the APIs to start diverging. It would be good to have a convergence phase where ideas from the various group are compared and commonalities can be extracted for the Common API.</p>
+<p>Hexagon Geospatial believe the hackathon was useful to get a feel for the practicality of the proposed APIs. However, when each group goes off to work on their specification separately, it is easy for the APIs to start diverging. It would be good to have a convergence phase where ideas from the various group are compared and commonalities can be extracted for the Common API.</p>
 </div>
 </div>
 </div>

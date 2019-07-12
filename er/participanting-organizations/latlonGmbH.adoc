@@ -1,15 +1,13 @@
 [[latlonGmbH]]
 === lat/lon GmbH
 
-lat/lon GmbH provides services in the field of space-related and state-of-the-art internet supported information systems for more than 10 years.
-
-Our occupation ranges from the software development and consulting to training and workshops. An interdisciplinary team consisting of geographers, computer scientists, and management scientists links the technical know-how to the necessary and creative experience. lat/lon GmbH has been a member of the Open Geospatial Consortium right from the beginning and forms spatial data infrastructures actively in the local sector, like on a state level or a federal level. Our aspiration is a coherent and interoperable infrastructure for the administration and for the exchange of spatial data and information.
+lat/lon GmbH has provided services in the field of space-related and state-of-the-art internet-supported information systems for more than 10 years. The services range from software development and consulting to training and workshops. An interdisciplinary team consisting of geographers, computer scientists, and management scientists links the technical know-how to the necessary and creative experience. lat/lon GmbH has been a member of the OGC from the beginning and is actively involved in the development of spatial data infrastructures in the local sector, for example, at a state level or a federal level. The aspiration of lat/lon GmbH is a coherent and interoperable infrastructure for the administration and exchange of spatial data and information.
 
 ==== Motivation to Participate
 
-lat/lon GmbH is supporting the CITE team having the position of "Lead Compliance Tools". Thus, there is a high interest in advancing the OGC test suites to be capable of testing the different OGC API specifications. During "Testbed 14" lat/lon GmbH developed a WFS 3.0, now called "OGC API - Features", test suite. This test suite represents a good base for other OGC API test suites. So, one major motivation is to investigate and evaluate the need for and technical preconditions of other OGC API test suites. Also, lat/lon GmbH wants to find an answer on the questions whether there is demand for an OGC API Common test suite and if the WFS 3.0 test suite can be used as a base for an OGC API Common test suite.
+lat/lon GmbH is involved in the OGC Compliance and Interoperability Testing (CITE) program, in the capacity of "Lead Compliance Tools". Thus, there is a high interest in advancing the OGC test suites to be capable of testing the different OGC API specifications. During OGC Testbed-14, lat/lon GmbH developed a WFS 3.0, now called "OGC API - Features", test suite. This test suite represents a good base for other OGC API test suites. So, one major motivation is to investigate and evaluate the need for and technical preconditions of other OGC API test suites. Also, lat/lon GmbH is interested in whether there is demand for an executable test suite for the OGC API - Common specification and whether the WFS 3.0 test suite can be used as a base for a test suite based on the OGC API - Common specification.
 
-In general, lat/lon GmbH is highly interested in further development of all OGC API specifications and provides input to discussions in e.g. GitHub issue trackers.
+In general, lat/lon GmbH is highly interested in further development of all OGC API specifications and provides input to discussions e.g. through GitHub issue trackers.
 
 ==== Implemented Solution
 
@@ -21,10 +19,10 @@ There were discussions trying to answer the question about technical preconditio
 
 ==== Experiences with OGC API Specifications
 
-As OGC API specifications are closer to well-known IT standards, it is easier for non-geospatial developers to understand and work with the APIs. In addition, the encodings JSON and HTML enable users with less technical skills to use the APIs. Especially, the HTML encoding might become interesting for non-technical users enabling even more users to work with OGC APIs.
+As OGC API specifications are closer to well-known IT standards, it is easier for non-geospatial developers to understand and work with the APIs. In addition, the JSON and HTML encodings enable users with less advanced technical skills to use the APIs. Especially, the HTML encoding might become interesting for non-technical users enabling even more users to work with OGC APIs.
 
 ==== Other Impressions & Recommendations
 
-The atmosphere at OGC API Hackathon was very friendly leading to productive work. Especially, the discussions about OGC API Common and at which degree common content might be shared between all OGC API specifications helped a lot to generate a common understanding of OGC APIs and to bring all specifications forward. This hopefully leads to homogeneous OGC API specifications following the same pattern.
+The atmosphere at OGC API Hackathon was very friendly leading to productive work. Especially, the discussions about OGC API - Common and at which degree common content might be shared between all OGC API specifications helped a lot to generate a common understanding of OGC APIs and to bring all specifications forward. This hopefully leads to homogeneous OGC API specifications following the same pattern.
 
-Thus, the Hackathon was very helpful at this early stage as it will have an impact on specifications itself. Further Hackathons might help to continue creating homogeneous specifications already proven in practice.
+Thus, the hackathon was very helpful at this early stage as it will have an impact on specifications itself. Future hackathons might help to continue creating homogeneous specifications already proven in practice.
