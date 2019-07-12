@@ -1,25 +1,31 @@
 [[GEOBEYOND]]
 === Geobeyond
 
-Participant: Francesco Bartoli
+Geobeyond is a geospatial software and solutions provider. Geobeyond is involved in the development of the GeoNode open source toolkit. GeoNode is a web-based application and platform for developing solutions for spatial data infrastructures (SDI). Francesco Bartoli represented Geobeyond at the hackathon.
 
 ==== Motivation to Participate
 
-* Port the GEE-Bridge API to OGC API - Commons and OGC API - Processes.
-* Discuss with the community how to handle WPS remote processes and process chaining (local and remote)
-* Understand and find the way how to implement several specifications together for the new GeoNode API
-* Align with the CSW community about the new OpenAPI based specification
+Geobeyond was motivated to participate in the hackathon by:
+
+* the potential to port the GEE-Bridge API to OGC API - Commons and OGC API - Processes.
+* discussion within the community on how to handle WPS remote processes and process chaining (local and remote)
+* the need to understand and find a way to implement several specifications together for the new GeoNode API
+* alignment with the CSW community about the new OpenAPI based specification
 
 ==== Implemented Solution
 
-* GeoNode API draft work of OGC API - Processes which would implement a generic solution for algorithms as functions
+During the hackathon, Geobeyond implemented a draft GeoNode API based on the OGC API - Processes specification which could provide a generic solution for algorithms as functions.
 
 ==== Proposed Alternatives
+
+The following considerations of alternative approaches were identified by Geobeyond:
 
 * Process chaining and consequently workflows should be part of the perimeter of the specification or can be an abstract concept within GeoNode?
 * Processing from cloud infrastructure (Google Earth Engine, IBM Geoscope, etc) have to be considered remote or local? Sort of WPS Cascading?
 
 ==== Experiences with OGC API Specifications
+
+Geobeyond has experience with the following OGC API Specifications:
 
 * Basic experience with OGC API - Features
 * Basic experience with OGC API - Commons and OGC API - Processes

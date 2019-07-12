@@ -1,15 +1,15 @@
 [[EsriUK]]
 === Esri UK
 
-Esri make ArcGIS mapping and analytics software. 
+Esri is a provider of Geographic Information Systems (GIS) software and solutions to a wide range of organizations. Esri software has been deployed in more than 350,000 organizations, including large cities and many national governments. Esri make ArcGIS mapping and analytics software. 
 
 ==== Motivation to Participate
 
-Evolution of the OGC specifications to a modern, developer-friendly API is essential. 
+Evolution of the OGC specifications to a modern, developer-friendly API is essential.
 
 ==== Implemented Solution
 
-To date we have not implemented any of the new draft OGC API standards in our released software. We have been working on various R&D prototypes of server and client. 
+To date Esri have not implemented any of the new draft OGC API standards in their released software. They have however been working on various R&D prototypes of server and client.
 
 ==== Proposed Alternatives
 
@@ -22,4 +22,3 @@ Esri has been involved in the OGC since its inception, and has widely implemente
 ==== Other Impressions & Recommendations
 
 TBA
-
