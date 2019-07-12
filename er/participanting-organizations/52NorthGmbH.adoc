@@ -1,9 +1,7 @@
 [[FiftyTwoNorthGmbH]]
 === 52°North GmbH
 
-
-
-TBA
+52°North is an open international network of research, industry and public administration organizations that partner in a collaborative process of Geomatics Research & Development. All software developed within the 52N R&D process is published under an open source license.
 
 ==== Motivation to Participate
 

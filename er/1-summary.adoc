@@ -49,8 +49,8 @@ All questions regarding this document should be directed to the editor or the co
 |Stephan Meißl | EOX | Contributor
 |Tom Kralidis | Open Source Geospatial Foundation (OSGeo) | Contributor
 |Alexander Jacob | Eurac Research | Contributor
-|TBA | TBA | Contributor
-|TBA | TBA | Contributor
+|Brian Osborn | CACI | Contributor
+|Robert St. John | CACI | Contributor
 |TBA | TBA | Contributor
 |TBA | TBA | Contributor
 |TBA | TBA | Contributor
