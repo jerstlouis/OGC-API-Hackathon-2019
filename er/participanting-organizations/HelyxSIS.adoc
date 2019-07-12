@@ -1,17 +1,15 @@
 [[HelyxSIS]]
 === Helyx SIS
 
-
-
-TBA
+Helyx SIS is a professional services company that specialises in the provision of information management and information exploitation, as well as the provision of geospatial information services and solutions. Amongst its professional services, Helyx also undertakes innovation and applied research for customers.
 
 ==== Motivation to Participate
 
-TBA
+As well as being an active participant on multiple OGC initiatives, e.g. testbeds, Helyx is also a provider of services to various government departments that are also members of the OGC.
 
 ==== Implemented Solution
 
-TBA
+Helyx prototyped an implementation of a routing profile of the OGC API - Processes specification, with potential application in transportation.
 
 ==== Proposed Alternatives
 
@@ -24,4 +22,3 @@ TBA
 ==== Other Impressions & Recommendations
 
 TBA
-

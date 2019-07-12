@@ -1,17 +1,15 @@
 [[Hexagon]]
 === Hexagon
 
-Hexagon is a global leader in sensor, software and autonomous solutions. We are putting data to work to boost efficiency, productivity, and quality across industrial, manufacturing, infrastructure, safety, and mobility applications. Our technologies are shaping urban and production ecosystems to become increasingly connected and autonomous — ensuring a scalable, sustainable future. 
-
-Within Hexagon Geospatial, we create solutions that visualize location intelligence. From the desktop to the browser to the edge, we bridge the divide between the geospatial and the operational worlds.
+Hexagon is a provider of sensor, software and autonomous solutions that work to boost efficiency, productivity, and quality across industrial, manufacturing, infrastructure, safety, and mobility applications. Hexagon technologies are helping to shape urban and production ecosystems to become increasingly connected and autonomous — ensuring a scalable, sustainable future. Hexagon Geospatial creates solutions that visualize location intelligence, bridging the divide between the geospatial and operational worlds.
 
 ==== Motivation to Participate
 
-Hexagon Geospatial has been an active supporter of OGC and OGC standards for many years. Next to implementing a wide range of OGC standards, we have ample experience in applying OGC standards within industry solutions for a variety of domains, such as Aviation, Defense & Intelligence, Maritime, Transportation, Mining or Disaster Management. By being part of many testbeds and interoperability experiments the past decade and contributing numerous software components and engineering reports, we also learned that cooperation with other people on real-world use cases is an excellent way of testing and improving specifications. Hexagon Geospatial is motivated to share its expertise as long-term implementer and user to support the advancements of OGC standards related to map tiles, coverages and processes.  
+Hexagon Geospatial has been an active supporter of OGC and OGC standards for many years. Next to implementing a wide range of OGC standards, Hexagon Geospatial have ample experience in applying OGC standards within industry solutions for a variety of domains, such as Aviation, Defense & Intelligence, Maritime, Transportation, Mining or Disaster Management. By being part of many testbeds and interoperability experiments over the past decade and contributing numerous software components and engineering reports, Hexagon Geospatial also learned that cooperation with other people on real-world use cases is an excellent way of testing and improving specifications. Hexagon Geospatial is motivated to share its expertise as a long-term implementer and user to support the advancements of OGC standards related to map tiles, coverages and processes.
 
 ==== Implemented Solution
 
-We implemented a desktop Java-based fat client to experiment with the Map Tiles API. The client retrieved data from the server provided by EsriUK, accessing the maps using the tile-based approach.
+A desktop Java-based client was implemented by Hexagon Geospatial to experiment with the OGC API - Map Tiles specification. The client retrieved data from the server provided by Esri UK, accessing the maps using the tile-based approach.
 
 Interesting about the client implementation is that it started from `/collections/{collectionId}` and used the provided metadata to look up the appropriate tile matrix set from `/tileMatrixSets/{tileMatrixSetId}`. Now that the tile structure was known, the client used `/collections/\{collectionId}/tiles/{styleId}/{tileMatrixSetId}/...` to get the actual tile data. Note that the specification was still evolving and there was no `map/` before `{styleId}/` yet.
 
@@ -31,20 +29,20 @@ image::images/hexagon_maptiles_3d.png[width=800,align="center"]
 
 ==== Proposed Alternatives
 
-We raised some questions related to the consistency and duplication in various parts of the metadata in the API.
+A number of questions were raised in relation to consistency and duplication in various parts of the metadata in the API.
 
-We participated in the discussions about composability of the tiling scheme on top of collections or maps.
+Hexagon Geospatial participated in the discussions about composition of the tiling scheme on top of collections or maps.
 
-We noted that there seems to be an opportunity for having more concepts in the Common API. Specifically, it seems that _extent_ could be in there.
+It was noted that there seems to be an opportunity for having more concepts in the Common API. Specifically, it seems that _extent_ could be included.
 
 When generating a map depicting multiple collections, the request will probably get quite complex. Perhaps it is useful to think of such a map as a composition of multiple single-collection maps. The multiple-collection map request could perhaps refer to multiple single-collection maps?
 
 ==== Experiences with OGC API Specifications
 
-The Hexagon Geospatial product portfolios applied OGC standards from the start and currently implement more than a dozen OGC standards and candidate standards, including implementations of WFS, WMS, WCS, WMTS, WPS, CSW, GeoPackage, Filter Encoding, SLD / SE, GML, KML, 3D Tiles and NetCDF. 
+The Hexagon Geospatial product portfolios applied OGC standards from the start and currently implements more than a dozen OGC standards and candidate standards, including implementations of WFS, WMS, WCS, WMTS, WPS, CSW, GeoPackage, Filter Encoding, SLD / SE, GML, KML, 3D Tiles and NetCDF.
 
 ==== Other Impressions & Recommendations
 
-It is very good to hear that OGC is trying to make the APIs more easily consumable by users. However, and perhaps specifically to the Map Tiles, the variety of use cases and access patterns still leads to considerable complexity, for instance by having request parameters related to parts of the URL path.
+Hexagon Geospatial sees as a positive development that OGC is trying to make the APIs more easily consumable by users. However, and perhaps specifically to the Map Tiles specification, the variety of use cases and access patterns still leads to considerable complexity, for instance by having request parameters related to parts of the URL path.
 
-We believe the hackaton was useful to get a feel for the practicality of the proposed APIs. However, when each group goes off to work on their specification separately, it is easy for the APIs to start diverging. It would be good to have a convergence phase where ideas from the various group are compared and commonalities can be extracted for the Common API.
+Hexagon Geospatial believe the hackathon was useful to get a feel for the practicality of the proposed APIs. However, when each group goes off to work on their specification separately, it is easy for the APIs to start diverging. It would be good to have a convergence phase where ideas from the various group are compared and commonalities can be extracted for the Common API.
