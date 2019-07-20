@@ -1,4 +1,4 @@
-[[GEOBEYOND]]
+[[Geobeyond]]
 === Geobeyond
 
 Geobeyond is a geospatial software and solutions provider. Geobeyond is involved in the development of the GeoNode open source toolkit. GeoNode is a web-based application and platform for developing solutions for spatial data infrastructures (SDI). Francesco Bartoli represented Geobeyond at the hackathon.
@@ -7,14 +7,23 @@ Geobeyond is a geospatial software and solutions provider. Geobeyond is involved
 
 Geobeyond was motivated to participate in the hackathon by:
 
-* the potential to port the GEE-Bridge API to OGC API - Commons and OGC API - Processes.
-* discussion within the community on how to handle WPS remote processes and process chaining (local and remote)
-* the need to understand and find a way to implement several specifications together for the new GeoNode API
-* alignment with the CSW community about the new OpenAPI based specification
+* the potential to port the https://github.com/francbartoli/gee-bridge[GEE-Bridge API] to OGC API - Commons and OGC API - Processes.
+* discussion within the community on how to handle WPS remote processes and process chaining (local and remote).
+* the need to understand and find a way to implement several specifications together for the new GeoNode API 4.0 which will be driven by the API-first approach and totally based on the OpenAPI v3 specification.
+* alignment with the CSW community about the new OpenAPI based specification.
 
 ==== Implemented Solution
 
-During the hackathon, Geobeyond implemented a draft GeoNode API based on the OGC API - Processes specification which could provide a generic solution for algorithms as functions.
+During the hackathon, Geobeyond implemented a draft https://github.com/geobeyond/geonode-api/tree/processes[GeoNode API] based on:
+
+ * OGC API - Processes specification which could provide a generic solution for algorithms as functions.
+
+This starting point will be the base building block to add more implementations to the next GeoNode 4.0 in order to add later more specifications and at least the following OGC standards:
+
+ * OGC API - Commons standard
+ * OGC API - Features standard
+ * OGC API – Coverages standard
+ * OGC API – Map Tiles standard
 
 ==== Proposed Alternatives
 
@@ -32,4 +41,4 @@ Geobeyond has experience with the following OGC API Specifications:
 
 ==== Other Impressions & Recommendations
 
-TBA
+The event has been pretty much useful and productive and the expectations are to see this kind of developer oriented meetings organized more frequently.
