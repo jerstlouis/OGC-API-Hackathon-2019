@@ -17,8 +17,11 @@ Geobeyond was motivated to participate in the hackathon by:
 During the hackathon, Geobeyond implemented a draft https://github.com/geobeyond/geonode-api/tree/processes[GeoNode API] based on:
 
  * OGC API - Processes specification which could provide a generic solution for algorithms as functions.
+ ** Implemented interface with out-of-the-box validation for jobs and result as modeled in the WPS REST Binding
+ ** Support of asynchronous processing and jobs persistence
+ ** Deploy ready for containers to Docker Swarm
 
-This starting point will be the base building block to add more implementations to the next GeoNode 4.0 in order to add later more specifications and at least the following OGC standards:
+This starting point will be the base building block to add more specifications to the next GeoNode 4.0 in order to be a reference implementation with at least the following OGC standards:
 
  * OGC API - Commons standard
  * OGC API - Features standard
