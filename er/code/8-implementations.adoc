@@ -72,7 +72,7 @@ include::participanting-organizations/NationalLandSurveyofFinland.adoc[]
 
 include::participanting-organizations/EOSDataAnalytics.adoc[]
 
-include::participanting-organizations/DistrictGovernmentCologneGeobasisNRW.adoc[]
+include::participanting-organizations/CologneGovernmentRegionalOffice.adoc[]
 
 include::participanting-organizations/Hexagon.adoc[]
 

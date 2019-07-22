@@ -1,0 +1,33 @@
+[[CologneGovernmentRegionalOffice]]
+=== Cologne Government Regional Office - Geobasis NRW
+
+Division 7 of the Cologne Government Regional Office is North Rhine-Westphalia‘s central service for geographic reference data and top-quality geo-products and services. Division 7 has statewide responsibility for collecting, storing, handling and making available basic topographic geodata. The basic geodata provided by Division 7 (coordinates, elevations, property boundaries, size and use of real estate, topographic information etc.) are needed for a wide range of purposes including planning, construction projects, transport and the supply of basic community services, nature conservation and environmental protection, valuation of real property, real estate transactions and mortgage borrowing. Against a background of rapid technological progress and changing environmental awareness, the division‘s services are now in demand from new sections of the community. Rather than chiefly asking for analogue data such as maps, plans and lists, users increasingly prefer digital information which they can integrate into existing databases.
+
+==== Motivation to Participate
+
+The motivation for Geobasis NRW was to implement OGC specification for Map Tiles in their application TIM-online 2.0 and to getting more information about the work in working groups.
+
+==== Implemented Solution
+
+During the OGC API Hackathon event in London, Geobasis NRW implemented the OGC API for Map Tiles by using the web service provided by ESRI (https://ogc-tiles-esri-server.azurewebsites.net/api/).
+
+Before the OGC API Hackathon, Geobasis NRW implemented the OGC API for Features by using ldproxy (https://www.ldproxy.nrw.de/). Have a look on the functionality:
+
+* Extras / Verwaltungseinheit
+* Extras / Flurstück
+* Extras / Gebäude
+
+Implementation available: https://www.tim-online.nrw.de/ogc-hackathon/
+
+==== Proposed Alternatives
+
+TBA
+
+==== Experiences with OGC API Specifications
+
+TBA
+
+==== Other Impressions & Recommendations
+
+TBA
+
