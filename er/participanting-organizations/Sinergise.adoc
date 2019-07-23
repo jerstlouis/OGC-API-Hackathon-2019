@@ -1,27 +1,25 @@
 [[Sinergise]]
 === Sinergise
 
-
-
-TBA
+Sinergise is a GIS company building large turn-key geospatial systems in the fields of cloud GIS, agriculture and real-estate administration. One of the Sinergise's disruptive technologies is [Sentinel Hub](https://sentinel-hub.com/), which enables real-time visualisation of multi-spectral data and supports building new earth-observation products, such as vegetation indices, in a matter of seconds.
 
 ==== Motivation to Participate
 
-TBA
+Motivation to participate was to assess possibility of using the new OGC API for Sinergise products and services and to contribute feedback to standards body.
 
 ==== Implemented Solution
 
-TBA
+We have implemented a frontend client which connects to two different backends and displays data, obtained via OGC Coverages API, on the map. Client is available at http://webdev.sentinel-hub.com/ogc-hackathon/index.html (view source for additional info). At the time of this writing one of the backends is not available, so we have updated the example so that it still loads after timeout.
 
 ==== Proposed Alternatives
 
-TBA
+None.
 
 ==== Experiences with OGC API Specifications
 
-TBA
+Sinergise is using OGC WMS, WCS and WFS in production systems. There are some limitations in the existing standards so we welcome development of better alternatives.
 
 ==== Other Impressions & Recommendations
 
-TBA
+Recommendations were submitted during hackathon sessions via tickets.
 
