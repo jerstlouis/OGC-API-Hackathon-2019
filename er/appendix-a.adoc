@@ -20,7 +20,7 @@ include::participanting-organizations/CubeWerxInc.adoc[]
 
 include::participanting-organizations/DeimosSpaceUK.adoc[]
 
-include::participanting-organizations/DistrictGovernmentCologneGeobasisNRW.adoc[]
+include::participanting-organizations/CologneGovernmentRegionalOffice.adoc[]
 
 include::participanting-organizations/Dstl.adoc[]
 
