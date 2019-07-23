@@ -1,7 +1,7 @@
 [[Sinergise]]
 === Sinergise
 
-Sinergise is a GIS company building large turn-key geospatial systems in the fields of cloud GIS, agriculture and real-estate administration. One of the Sinergise's disruptive technologies is [Sentinel Hub](https://sentinel-hub.com/), which enables real-time visualisation of multi-spectral data and supports building new earth-observation products, such as vegetation indices, in a matter of seconds.
+Sinergise is a GIS company building large turn-key geospatial systems in the fields of cloud GIS, agriculture and real-estate administration. One of the Sinergise's disruptive technologies is Sentinel Hub (https://sentinel-hub.com/), which enables real-time visualisation of multi-spectral data and supports building new earth-observation products, such as vegetation indices, in a matter of seconds.
 
 ==== Motivation to Participate
 
