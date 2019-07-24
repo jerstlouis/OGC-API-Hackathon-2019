@@ -51,6 +51,11 @@ The client application runs from a web browser.
 ==== Esri OGC API-Tiles Demo Client
 The Esri client application is a simple Leaflet application which connects to the Esri OGC API-Tiles server implementation for testing purposes.
 
+
+==== Sinergise OGC Coverages Demo Client
+
+The Sinergise OGC Coverages Demo Client is a single-page Javascript application, using Leaflet.js to show the data from different backends. Support for two different backends was implemented, Rasdaman and EOX IT Services. The frontend is available at http://webdev.sentinel-hub.com/ogc-hackathon/index.html (view source for additional info).
+
 ==== TBA
 
 TBA
