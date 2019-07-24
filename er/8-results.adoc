@@ -36,7 +36,7 @@ The participants https://github.com/opengeospatial/OGC-API-Map-Tiles/issues/14[o
 
 === OGC API - Coverages
 
-The participants agreed that OGC API - Coverages should inherit from OGC API - Common as much as possible. This meant that wherever a requirement is specified in OGC API - Common, if it is relevant to coverages, the OGC API - Coverages specification would reference the requirement in the OGC API - Common specification.
+The participants agreed that OGC API - Coverages should inherit from OGC API - Common as much as possible. This meant that wherever a requirement is specified in OGC API - Common, if it is applicable to coverages, the OGC API - Coverages specification would reference the requirement in the OGC API - Common specification.
 
 The participants agreed that a request for the coverages path would return a list of all  of the coverage identifiers included in the collection.
 
