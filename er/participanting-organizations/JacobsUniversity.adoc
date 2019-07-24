@@ -1,27 +1,37 @@
 [[JacobsUniversity]]
 === Jacobs University
 
-
-
-TBA
+The https://www.jacobs-university.de/lsis[Large-Scale Scientific Information Systems Research Group] at https://www.jacobs-university.de/[Jacobs University] is researching on flexible, user-oriented, scalable services on massive multi-dimensional arrays, aka "datacubes". Among its results are http://kahlua.eecs.jacobs-university.de/~lsis/publications.php[160+ publications] on the topic, the pioneer Array DBMS, http://www.rasdaman.org[rasdaman], and a series of http://kahlua.eecs.jacobs-university.de/~lsis/Standards/[OGC and ISO datacube standards]; the OGC WCS suite meantime is http://external.opengeospatial.org/twiki_public/CoveragesDWG/WebHome#Known_Implementations[implemented by a large, growing number of open-source and proprietary raster service tools].
 
 ==== Motivation to Participate
 
-TBA
+Being tightly engaged in coverage standardization since many years it was important to accompany development of new APIs for coverages to ensure proper use of the coverage concept, to contribute an implementation based on rasdaman, and also to give assistance to other implementers in coverage concepts.
 
 ==== Implemented Solution
 
-TBA
+The rasdaman engine, which suppors GET/KVP, POST/XML, and SOAP protocol bindings for coverage services, was extended with an experimental facade translating OpenAPI requests into standard WCS requests.
 
 ==== Proposed Alternatives
 
-TBA
+No alternatives are proposed, but more rigorous definitions are strongly encouraged, also to spot and resolve current issues - see below for details.
 
 ==== Experiences with OGC API Specifications
 
-TBA
+OpenAPI, as used by OGC, represents a minimalistic style aiming at providing all functionality squeezed into URL syntax. Naturally, there are strong limitations in expressiveness and syntactic elegance. Additionally, even basic concepts are not defined clearly, see issues in the https://github.com/opengeospatial/ogc_api_coverages[OAPI Coverages repo]:
+
+* https://github.com/opengeospatial/ogc_api_coverages/issues/1[1]: OpenAPI basics: what does "/" mean? (closed while not resolved), 
+* https://github.com/opengeospatial/ogc_api_coverages/issues/3[3]: Path syntax (closed while not resolved)
+* https://github.com/opengeospatial/ogc_api_coverages/issues/19[19]: identifier syntax for OAPI Common
+
+Additional issues include
+
+* Ontology links, CRSs as per OGC-NA and other objects are usually expressed as URLs, too. Using them - i.e., "URL in URL" - is awkward. Not co tonsider "URL in RUL in RUL" for which there are use cases indeed.
+* mixed use of path components - in the URL /collections/{collectionId}/coverages/{coverageID}/rangetype the path component "collections" is a fixed keyword; "{collectionid} is an identifier in the service offering, whereby the pair "collection and "collectionid" always must appear (i) at that position in the path and (ii) in that sequence; "rangeType" is a function that extracts part of a coverage. Hence, a path component can be a keyword, an identifier, or a function. In case of a function, in the case of "rangetype" the function input is the left-hand side, but it is not clear that this is always so. Additional parameters are only possible in the query part, and this query part constitutes one single pool of arguments where it needs extra effort to disentangle what parameter belongs to what function.
+* there is a one-level collection concept, ie: every service must offer a collection of items, which cannot contain other collections. It remains unclear why variable-depth collections are not supported (although they have been discussed).
+* Harmonization is addressed explicitly by bringing four important groups together, which is a precious step. However, currently this is more on syntactic level than on the semantics. Example: OpenAPI Features insist on keeping their coordinate lists which maintains the old, well-known problem of coordinate ambiguity and subsequent discussions about x/y versus y/x sequence; this bad practice is continued with height/depth now: h/x/y versus x/y/h etc. The OGC coverage standards do not have this problem because with each coordinate the axis is mentioned explicitly, hence despite arbitrary sequence of th parameters the semantics always is unambiguous. Further, Features continue separate treatment - syntactically and semantically - of (horizontal) space and time, bypassing the experience in spatio-temporal handling in Coverages.
 
 ==== Other Impressions & Recommendations
+It is strongly recommended to pursue two "housekeeping" tasks before groups may have established their own interpretations:
 
-TBA
-
+* establish a clear correspondence between WCS Core and additionally all extensions (discussion has started about range subetting, for example). This will constitute an easy guidance on how to proceed with considering further functionality, as well as the mechanics of each functionality (which has been elaborated over 10+ years by coverage stakeholders from all sort of domains), and (iii) speed up implementation as service implementers just need to provide facades to their existing frontends, rather than establishing a parallel silo.
+* establish a clear semantics for the basics of OpenAPI use in OGC - a task for OpenAPI Common, actually.
