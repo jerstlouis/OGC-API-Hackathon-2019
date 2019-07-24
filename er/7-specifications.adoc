@@ -142,14 +142,14 @@ A summary of the paths offered by the OGC API - Coverages specification is prese
 * Path = /collections
 ** Returns metadata describing the collections accessible through this API (inherited from OGC API - Common)
 * Path = /collections/{collectionId}
-** Returns metadata describing the collection identified by {collectionId}
+** Returns metadata describing the collection identified by {collectionId}, in particular: a list of the identifiers of its members
 * Path = /collections/{collectionId}/coverages
 ** Returns metadata about each coverage in the collection
 * Path = /collections/{collectionId}/coverages/{coverageID}
-** Returns the coverage itself.  Typically as an image file.
+** Returns the coverage itself, in some encoding - either ASCII (XML, JSON, RDF, etc.) or binary (GeoTIFF, NetCDF, etc.) or multipart (such as MIME, zip, etc.) as defined in OGC CIS 1.x
 * Path = /collections/{collectionId}/coverages/{coverageID}/metadata
-** Returns metadata about a coverage.
+** Returns the metadata associated with the coverage identified by {coverageId}, as defined in OGC CIS
 * Path = /collections/{collectionId}/coverages/{coverageID}/domainset
-** Returns a description of the domain set of the coverage
+** Returns the domain set of the coverage identified by {coverageId}, as defined in OGC CIS
 * Path = /collections/{collectionId}/coverages/{coverageID}/rangetype
-** Returns a description of the range type of the coverage
+** Returns the range type of the coverage identified by {coverageId}, as defined in OGC CIS based on SWE Common DataRecords
