@@ -1,27 +1,26 @@
 [[GeoCatBV]]
 === GeoCat B.V.
 
+Established in the Netherlands in 2007, GeoCat (https://www.geocat.net) offers cutting-edge customized software and services that make publishing geospatial data on the Internet easier and more efficient. Operating in the fast growing market of Spatial Data Infrastructures (SDI) and geospatial-enabled technologies. GeoCat builds sustainable applications following the Free and Open Source Software (FOSS) philosophy and open standards.
 
-
-TBA
+Therefore, GeoCat has provided successful consulting services and products that contributed to the development of National Spatial Data Infrastructures for The Netherlands, Switzerland, Norway, Sweden, Finland, Denmark, Scotland, The European Space Agency and many others.
 
 ==== Motivation to Participate
 
-TBA
+GeoCat has been constantly an active supporter of OGC and OGC standards. Working with SDI, especially with geospatial catalogues, GeoCat implemented a wide range of OGC standards. The interest of GeoCat is mostly in OGC API standard definition, but also how it's specialized in standards related to map tiles, coverages and processes.
+There are two main focuses for GeoCat, especially related to GeoNetwork (https://www.geonetwork-opensource.org), in such events:
+
+- To collect experience and contribute the discussion to implement support for OGC API Catalogs specifications.
+- To understand challenges in implementation of clients to collect informations, possibly metadata, from OGC API endpoints.
 
 ==== Implemented Solution
 
-TBA
-
-==== Proposed Alternatives
-
-TBA
+It will be evaluated to include support for these new standards on the GeoCat projects roadmap. However, the codesprint deadlines did not allow implementing a solution at the time.
 
 ==== Experiences with OGC API Specifications
 
-TBA
+GeoCat has been constantly an active supporter of OGC and OGC standards, including recent efforts on WFS 3.0.
 
 ==== Other Impressions & Recommendations
 
-TBA
-
+There was an admirable motivation into creating standards easy to understand and simple. On the other hand, valid remarks were raised on being so strict on OGC API on collection concepts, especially when applied to concepts like processes. This could potentially bring a lower adoption of such standards, also considering the remarkable maturity level.
