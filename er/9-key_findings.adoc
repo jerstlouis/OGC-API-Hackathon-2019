@@ -65,7 +65,7 @@ The hackathon was therefore organized around teams based on the OGC API specific
 
 ==== Technology
 
-The client and service applications were bound together through interfaces conforming to the OGC APIs for Map Tiles, Processes, Features, Catalogues, and Coverages. The client applications included software from Hexagon, Helyx, OpenSphere, Esri, Solenix, EURAC and Sinergise. The service applications included software from  52 North, CubeWerx, Esri, Helyx, pygeoapi, Geoserver, Spacebel, West University of Timisoara, and rasdaman. The variety of software implementations suggests that the OGC API specifications widely implementable and do not depend on any single vendor’s technology.
+The client and service applications were bound together through interfaces conforming to the OGC APIs for Map Tiles, Processes, Features, Catalogues, and Coverages. The client applications included software from Hexagon, Helyx, OpenSphere, Esri, Solenix, EURAC and Sinergise. The service applications included software from 52 North, CubeWerx, Esri, Helyx, pygeoapi, Geoserver, Spacebel, West University of Timisoara, rasdaman, and interactive instruments. The variety of software implementations suggests that the OGC API specifications widely implementable and do not depend on any single vendor’s technology.
 
 As discussed in <<Architecture>>, the software products that were deployed by the aforementioned organizations included:
 
@@ -77,6 +77,7 @@ As discussed in <<Architecture>>, the software products that were deployed by th
 * Hexagon LuciadLightspeed
 * Solenix WPS Demo Client
 * Esri OGC API-Tiles Demo Client
+* ldproxy
 
 The deployed technologies includes software implemented in C, {cpp} , Python, Java, and NodeJS. Some of the deployed technologies include Python adapters to software implemented in {cpp}. This variety of programming languages shows that the OGC API specifications are independent of any programming language.
 
@@ -127,7 +128,7 @@ It should be noted that although the hackathon resulted in additions and deletio
 
 The first objective of the hackathon was to develop, deploy and test services/clients that support OGC APIs. The hackathon participants were able to develop and deploy services and clients during the hackathon, as documented in <<table_ties>>. The participants were also able to successfully bind together many of the services with client applications provided by other participants, using OGC APIs. This confirms that the first objective of the hackathon was fully met.
 
-A second objective of the hackathon was to suggest improvements for a common core. Some of the discussions around the OGC API - Common specification included default support for the CRS:84 coordinate system and the role of version numbers. The discussion that began at the hackathon on the need for a new CRS that adds ellipsoidal height to CRS:84 has resulted on a proposal being passed by the WFS/FES SWG. Further, the discussion on the role of the `/api` resource has resulted in consensus between the various SWGs that the `/api` resource is optional. These discussions and the resolutions resulting from them confirm that the second objective of the hackathon was also met.
+A second objective of the hackathon was to suggest improvements for a common core. Some of the discussions around the OGC API - Common specification included default support for the CRS:84 coordinate system and the role of version numbers. The discussion that began shortly before the hackathon on the need for a new CRS that adds ellipsoidal height to CRS:84 has resulted on a proposal being passed by the WFS/FES SWG. Further, the discussion on the role of the `/api` resource has resulted in consensus between the various SWGs that the API definition does not have to be resource inside the API at path `/api`. These discussions and the resolutions resulting from them confirm that the second objective of the hackathon was also met.
 
 A third objective of the hackathon was to define rules/guidance that can be documented. Several edits to the OGC API specifications were made on the lead up to the hackathon, and during the event. These edits included additions and deletions of some of the rules and guidance in the specifications, as well as improvements to some of the existing rules and guidance. More than 4600 additions and 3200 deletions to the draft API specifications as an immediate result of the hackathon, thereby confirming that the third objective of the hackathon was also met.
 

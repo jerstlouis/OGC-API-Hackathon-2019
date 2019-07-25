@@ -23,10 +23,21 @@ The 52°North JavaPS product is an open source implementation of both the Web Pr
 ==== Esri
 Esri produce both an installable product (ArcGIS Enterprise) and SaaS product (ArcGIS Online) which support adopted OGC specifications. ArcGIS Enterprise as a server implements WMS, WMTS, WCS2, WPS, WFS2, KML, Geopackage etc as well as other de-facto standards. ArcGIS Online as a server implements WMTS, WFS2 as well as other de-facto standards.
 Until the OGC API standards are stable and formally adopted, it is not feasible to implement them in the released products. Therefore for the purposes of the Hackathon and further R&D, Esri have implemented the OGC-API tiles as a facade on to ArcGIS Online tiled services. Technically this is currently implemented as a node.js server running in Microsoft Azure.
-https://ogc-tiles-esri-server.azurewebsites.net 
+https://ogc-tiles-esri-server.azurewebsites.net
 
 ==== rasdaman
 rasdaman ("raster data manager") is a flexible, scalable datacube engine with location-transparent federation capabilities. Open-source rasdaman is available from www.rasdaman.org. Being WCS reference implementation rasdaman supports OGC WMS, WCS, and WCPS (the OGC datacube analytics standard). For experimentation with the emerging OGC OpenAPI interface for coverages a rasdaman server has been made available on Amazon with an OpenAPI facade to WCS; access has been demonstrated with EURAC and Sinergise OpenAPI clients.
+
+==== ldproxy
+
+ldproxy is an implementation of the OGC API family of standards, based on the W3C/OGC Spatial Data on the Web Best Practices. It is written in Java
+(link:https://github.com/interactive-instruments/ldproxy[Source Code]) and is typically deployed using docker (link:https://hub.docker.com/r/iide/ldproxy/[DockerHub]).
+
+The software originally started in 2015 as a Web API for feature data based
+on WFS 2.0 capabilities. In addition to the JSON/XML encodings, an emphasis
+is placed on an intuitive HTML representation.
+
+The current version supports WFS 2.0 instances as well as PostgreSQL/PostGIS databases as backends. It implements all conformance classes and recommendations of "OGC API - Features - Part 1: Core" plus a number of experimental OGC API Features extensions (CRS support, /items path, property selection, geometry simplification, transactions, dynamic links, and more). ldproxy also has draft implementations for additional resource types (Tiles, Styles).
 
 ==== TBA
 

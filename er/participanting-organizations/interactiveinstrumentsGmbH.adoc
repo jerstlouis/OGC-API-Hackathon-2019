@@ -1,27 +1,176 @@
 [[interactiveinstrumentsGmbH]]
 === interactive instruments GmbH
 
+interactive instruments has been a strong supporter of the current OGC API
+activities in OGC and ISO/TC 211 from the beginning. We have also contributed
+to the W3C/OGC Spatial Data on the Web Best Practices and started developing
+link:https://github.com/interactive-instruments/ldproxy[ldproxy] as an open
+source Web API for feature data based on WFS 2.0 capabilities in 2015 in the
+link:http://geo4web-testbed.github.io/topic4/[Geonovum "Spatial Data on the Web" testbed].
 
-
-TBA
+Our link:https://www.interactive-instruments.de/en/xtraserver/[XtraServer] software
+is an OGC reference implementation for WFS 1.1/2.0, GML 3.2, and WMS 1.1/1.3.
 
 ==== Motivation to Participate
 
-TBA
+* We are the main editor of "OGC API - Features - Part 1: Core" (formerly
+known as WFS 3.0). Before the hackathon, most of the open issues raised since
+the first draft release (April 2018) had been resolved and the draft standard
+was close to being submitted for approval votes in the OGC and ISO Technical
+Committees. As the draft of OGC API Common is largely a subset of that draft
+standard, the OGC members asked OGC to organise the hackathon to verify that
+the "common" part is extensible for other resource types.
+* Build on the good experience with the
+link:http://www.opengeospatial.org/blog/2764[WFS 3.0 hackathon]
+to accelerate specification development with a focus on developer feedback
+and a "code first" approach.
+* Be available for questions on OGC API, in particular OGC API Features.
+* Understand and discuss resource types for Maps and Tiles. In OGC Testbed 14
+and the OGC Vector Tiles Pilot, experimental extensions have been implemented
+in ldproxy. This work is continuing in
+link:https://portal.opengeospatial.org/files/?artifact_id=82290#Portrayal[OGC Testbed 15 in the Open Portrayal Framework task].
+* In ongoing work in the link:https://portal.opengeospatial.org/files/82559[OGC Open Routing API Pilot]
+we raised some questions about the approach taken by OGC API Processes (see the
+link:https://app.swaggerhub.com/apis/cportele/wps-routing-api/1.0.0[draft API documentation]
+and the link:https://github.com/opengeospatial/RoutingAPIPilot/issues/1[related GitHub issue].
+The goal was to discuss the topic with developers of OGC API Processes.
+* Work on upgrading ldproxy to the latest draft of OGC API Features.
 
 ==== Implemented Solution
 
-TBA
+At the start of the hackathon ldproxy implemented the first draft release of OGC API
+Features (link:https://rawcdn.githack.com/opengeospatial/WFS_FES/3.0.0-draft.1/docs/17-069.html[draft.1 from April 2018])
+plus several extensions (CRS, `/items` path, property selection, geometry
+simplification, transactions, dynamic links, etc.) as well as other resource
+types (tiles, styles).
+
+Example services:
+
+* link:https://www.ldproxy.nrw.de/[Open Data in North-Rhine Westphalia, Germany]
+* link:https://services.interactive-instruments.de/vtp/daraa[OGC Vector Tiles Pilot implementation]
+
+Most of the time at the hackathon has been spent answering questions and discussing
+various approaches. Some progress was made in updating ldproxy to the
+latest draft of "OGC API - Features - Part 1: Core". The updates were tested and included
+in our link:https://services.interactive-instruments.de/t15/daraa[OGC Testbed 15 implementation].
 
 ==== Proposed Alternatives
 
-TBA
+===== Features
+
+Two issues were raised in OGC API Features as a result of discussions at or
+related to the hackathon.
+
+* link:https://github.com/opengeospatial/WFS_FES/issues/234[FeatureCollection (xml) schema and streaming]
+* link:https://github.com/opengeospatial/WFS_FES/issues/236[Endpoint `/api` missing from OpenAPI specification]
+
+Both issues were resolved and addressed in the release candidate of
+link:http://docs.opengeospatial.org/DRAFTS/17-069r2.html[OGC API - Features - Part 1: Core].
+
+Note that the second issue is relevant for a future OGC API Common.
+
+===== Common
+
+In the discussions about Common several aspects were raised where coverage
+collections differ from feature collections. No issues were identified that
+would require a change in Features, but the specification of the OGC API Common
+conformance classes will need to take the different resource requirements
+into account.
+
+===== Processes
+
+As mentioned in the motivation section, one goal was to discuss the design
+of OGC API Processes with developers of the specification. The discussion
+took place on the second day.
+
+The following topics were discussed:
+
+* "Process" and "Job" are not the resources a developer would expect in a
+dedicated API for a process, for example, a routing API.
+* The process description defines an OGC-specific schema language while
+OpenAPI already uses a schema language (JSON Schema). As a result, a developer
+has to understand the JSON schema of the OGC-specific schema language first
+(defined in the OpenAPI definition) to understand the input and output schemas
+of the routing process (from the response to `/processes/{processId}`).
+* This extra layer of information also results in a more complex and verbose
+representation of a job definition in the OGC API Processes variant.
+
+An important aspect in this is that the OGC API standards are intended to
+be easier to use (than the current OGC Web Services standards), including
+for those that are not geo-experts. Web APIs implementing at least the
+core parts of the OGC API standards should be useable by developers that
+are not familiar with OGC standards and that do not have a comprehensive
+toolset supporting all kinds of OGC standards.
+
+With this in mind, one option for moving WPS into the OGC API family
+could be to mainly specify guidance and patterns for API building blocks
+for processing geospatial data. I.e., building blocks how to implement
+asynchronous or synchronous processes, simple notifications using webhooks,
+more advanced notifications using MQTT or AsyncAPI, how to specify input
+and output schemas of processes, etc. Where OpenAPI is used, the inputs
+and outputs of the processes should be described using JSON Schema.
+
+In the discussion we identified some aspects of the current WPS standard
+that might also lead to an OGC API standard. For example:
+
+* One of the motivations for the WPS-specific process descriptions was to
+limit the schema complexity that WPS-implementations have to support.
+One approach could be to specify a simple JSON Schema profile for
+OGC API processing resources that would be based on the existing WPS standard.
+Since this would be an OGC standard, a key part of this would be spatial and
+temporal components.
+I.e., existing WPS implementations would become backends for the rapid
+implementation of processing resources that follow the OGC API guidance.
+* Another capability that needs more thoughts is WPS-T, i.e., the capability
+to deploy new processing resources. With the uptake of virtualization,
+containerization, cloud infrastructures, etc. it is obvious, however, that this
+is more a general IT topic than an OGC topic as there is nothing "geospatial"
+about deploying a new container on a server.
+
+In the discussion there was consensus that such an approach could be a way
+forward for supporting standards-based processing of geospatial data in
+Web APIs. It was agreed to continue the discussion in the OGC WPS Standards
+Working Group.
+
+===== Catalogues / Records and STAC
+
+A break-out also discussed an
+link:https://github.com/opengeospatial/CAT4.0[OGC API approach for catalogues and records ("CAT4.0")].
+interactive instruments supports this activity and joined the group working
+on a charter for such an OGC API standard since it is not restricted to metadata
+records, but explicitly includes other types of records, too, for example, for
+publishing code lists.
+
+STAC and OGC API Features started in parallel and aligned common aspects
+during the link:http://www.opengeospatial.org/blog/2764[WFS 3.0 hackathon]
+in March 2018, which was co-located with a STAC sprint and basically a
+joint event. With part 1 of OGC API Features becoming stable, the focus
+of the Features group in OGC will move towards commonly requested extensions.
+Some of those are also under discussion in STAC - and important for the CAT4.0
+activity. Examples include more query capabilities and transactions. The goal
+would be to keep the specifications aligned, where we have the same
+requirements.
+
+There was agreement in discussions to have a common web-meeting in a few weeks
+to start the discussion and potentially another joint hackathon/sprint event
+later.
 
 ==== Experiences with OGC API Specifications
 
-TBA
+* Main editor of "OGC API - Features - Part 1: Core"
+* Co-chair of WFS SWG and the ISO 19168-1 project
+* Developer of the ldproxy software
+* Use of ldproxy and WFS 3.0 / OGC API in various projects
+* Work in OGC initiatives Testbed-14, Vector Tiles Pilot, Testbed-15, Open
+Routing API Pilot on OGC API / OpenAPI topics
+* Use of Swagger (version 2.0) in implementations for several years
 
 ==== Other Impressions & Recommendations
 
-TBA
+The hackathon was very helpful to broaden the OGC API discussions and to confirm
+the approach taken by OGC API Features. The event was very well organized and
+the location was excellent.
 
+Such two or three day implementation-driven "specification sprints" are an
+excellent mechanism for moving draft OGC standards that follow the same
+open process as OGC API Features forward.

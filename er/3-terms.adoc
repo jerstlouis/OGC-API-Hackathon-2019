@@ -16,6 +16,12 @@ For the purposes of this report, the definitions specified in Clause 4 of the OW
 
  a document (or set of documents) that defines or describes an API and conforms to the OpenAPI Specification [derived from the OpenAPI Specification]
 
+&#9679; Web API ::
+
+ API using an architectural style that is founded on the technologies of the Web [derived from the W3C Data on the Web Best Practices]
+
+NOTE: link:https://www.w3.org/TR/dwbp/#APIHttpVerbs[Best Practice 24: Use Web Standards as the foundation of APIs] in the W3C Data on the Web Best Practices provides more detail.
+
 &#9679; commit  ::
  As a noun, a commit is a single point in the Git history that represents a "revision" or "version" [derived from https://git-scm.com/docs/gitglossary].
 

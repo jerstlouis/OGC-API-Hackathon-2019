@@ -1,12 +1,12 @@
 [[Overview]]
 == Overview
 
-Section 6 introduces the OGC API Hackathon by describing the challenge, the scenario adopted, and the infrastructure used by the participants. The section also presents overviews of the datasets and services identified to support participants during the Hackathon. The section also presents a list of the organizations represented by the participants.
+Section 5 introduces the OGC API Hackathon by describing the challenge, the scenario adopted, and the infrastructure used by the participants. The section also presents overviews of the datasets and services identified to support participants during the Hackathon. The section also presents a list of the organizations represented by the participants.
 
-Section 7 presents the solution architecture developed in this hackathon. The section identifies the client and service implementations of the OGC API specifications. 
+Section 6 presents the solution architecture developed in this hackathon. The section identifies the client and service implementations of the OGC API specifications.
 
-Section 8 describes each of the OGC API specifications that were involved in the hackathon.
+Section 7 describes each of the OGC API specifications that were involved in the hackathon.
 
-Section 9 provides summary of the main findings and discusses alternative approaches that could have been taken, as well as experiences and lessons learnt.
+Sections 8 and 9 document the results and provide a  of the main findings and discusses alternative approaches that could have been taken, as well as experiences and lessons learnt.
 
 Appendix A provides reports from each participating organisation, covering their motivation for participating, a description of their implementation of the OGC API specifications, alternative approaches, their experiences, impressions and recommendations.
