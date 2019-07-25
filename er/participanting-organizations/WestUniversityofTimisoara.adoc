@@ -6,7 +6,7 @@ Our http://sage.ieat.ro/[group] is involved in a multitude of research projects 
 
 Participants:
 
-* http://www.sage.ieat.ro/p/teodora/[Teodora Selea] (main developer)
+* http://www.sage.ieat.ro/p/teodora/[Teodora Selea]
 * http://www.sage.ieat.ro/p/marian/[Marian Neagul]
 * http://www.sage.ieat.ro/p/gabriel/[Gabriel Iuhasz]
 
