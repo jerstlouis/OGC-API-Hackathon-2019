@@ -9,7 +9,7 @@ Therefore, GeoCat has provided successful consulting services and products that 
 
 GeoCat has been an active supporter of OGC and OGC standards continuously. Working with SDI, especially with geospatial catalogues, GeoCat implemented a wide range of OGC standards. GeoCat participated in the GeoNovum testbed for spatial data on the web, from which results were contributed to the final report of the OGC/W3C best practice for spatial data on the web report. Which was taken as the base for the OGC API developments. Having the OGC standards able to connect to standards in the web domain enlarges the audience of spatial data, but also allows us to benefit from research on standards in those domains.
 
-There is a number of focus areas for GeoCat, especially related to [GeoNetwork](https://www.geonetwork-opensource.org), in such events:
+There is a number of focus areas for GeoCat, especially related to GeoNetwork (https://www.geonetwork-opensource.org), in such events:
 
 - We're looking forward to participate in the next generation of UML, YAML & RDF models for spatial data and how they are exchanged in the scope of OGC API's.
 
@@ -21,7 +21,7 @@ There is a number of focus areas for GeoCat, especially related to [GeoNetwork](
 
 ==== Implemented Solution
 
-- GeoCat contributes to the pygeoapi project, focussing on dataset discovery.
+- GeoCat contributes to the pygeoapi (https://pygeoapi.io) project, focussing on dataset discovery.
 
 - GeoCat is evaluating how to integrate OAPI Catalog into the GeoNetwork catalog product.
 
