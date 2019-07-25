@@ -4,19 +4,29 @@ The subject of this Engineering Report (ER) is a hackathon event that was held f
 
 == Executive Summary
 
-(( The following is, as all texts in double square brackets, a helper text. Please remove this and all other helper texts once done. ))
+// more stuff to add
+// •	business value of this Engineering Report to improve interoperability, advance location-based technologies or realize innovations.
+// •	key findings and results in a concise form
+// •	recommendations on how to further proceed with the standardisation work
+// •	Proposed or agreed follow-on work initiatives
 
-(( The Executive Summary clause shall contain the key findings and results in a concise form. A more detailed description of the findings should be in the body of the report. ))
+Several technologies and practices have emerged over the past decade that have presented new opportunities for geospatial software developers. Amongst those technologies are Web Application Programming Interfaces (APIs). In order to leverage the capabilities offered by these technologies, the OGC has initiated a body of work to develop draft standards for OGC APIs. At the February 2019 OGC Technical Committee (TC) meeting in Singapore, the TC took a decision to hold a hackathon to help advance many of the draft OGC API standards.
 
-(( The Executive Summary shall contain a business value statement that should describe the value of this Engineering Report to improve interoperability, advance location-based technologies or realize innovations. ))
+The hackathon was held from June 20th to 21st, 2019, hosted by the Geovation Hub in London, United Kingdom. The European Space Agency (ESA), Ordnance Survey and Geovation sponsored the event. The hackathon was also supported by the US National Geospatial Intelligence Agency (NGA). The goal of the hackathon was to advance the development of OGC API specifications, with the aim of the hackathon being to provide an environment and an opportunity for the geospatial community to achieve this goal. The following objectives were set for the hackathon:
 
-(( This section shall include precise descriptions of the requirements that have been addressed by the work documented in this Engineering Report; together with the research motivation that answers the fundamental question: What motivated us to address this topic in this report? ))
+* Develop, deploy and test services/clients that support OGC APIs
+* Suggest improvements for a common core
+* Define rules/guidance that can be documented
+* Validate work that has been completed to date
+* Contribute to the GitHub repositories of the draft standards
 
-(( This section provides an overview of recommendations on how to further proceed with the achievements documented in this ER. ))
+More than 70 individuals participated in the event. The participants represented 60 organizations; 41 of those organizations are OGC members; one of the organizations is an OGC Alliance Partner and the remaining 18 organizations are non-members. Working collaboratively, the participants formed teams around the draft standards.
 
-(( This section shall be between 1-3 pages.))
+During the two-day hackathon, the participants developed, deployed and tested a variety of implementations of OGC APIs. These implementations were from different organizations, including private, public and academic organizations. Suggestions for improvements were made, and in some cases, editors of the standards were able to update the draft standards during the hackathon. Improvements to the common core were discussed, and where possible, agreed on. The work that had previously been done was validated through development and testing. Where the previous work was invalid, suggestions for improvements were identified. Requirements and recommendations were discussed and documented as rules and guidance in the Github repositories of the draft standards. This Engineering Report therefore concludes that the hackathon achieved its goal.
 
-The output of this hackathon should lead to a solid, common core and advancement of a whole new generation of OGC standards that are flexible in modern IT environments.
+One of the key findings of the hackathon was that the draft OGC API standards are implementable. This was evidenced by the implementations developed by many of the participating organizations at the hackathon. Another key finding is that the 'building-block' principle, adopted by the different draft standards, allows for a common core to be specified. This was evidenced in the use of common capabilities such as `/collection` paths and support for bounding box (BBOX) queries.
+
+It is envisaged that the output of the hackathon will be instrumental to the evolution of OGC web service standards to a modern API-based approach, setting the course for open geospatial standards for the next decade. The output should lead to a solid, common core and advancement of a whole new generation of OGC standards that are flexible in modern IT environments. This does not mean that existing OGC web service standards will fade away. Instead, it means that a new suite of OGC standards will give developers and users the option of leveraging capabilities offered by Web APIs.
 
 ===	Document contributor contact points
 

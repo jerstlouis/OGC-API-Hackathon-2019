@@ -1,7 +1,13 @@
 [[KeyFindings]]
-== Key Findings
+== Findings
 
-This section presents the key findings from the Hackathon.
+=== Key Findings
+
+One of the key findings of the hackathon was that the draft OGC API standards are implementable. This was evidenced by the implementations developed by many of the participating organizations at the hackathon.
+
+Another key finding is that the 'building-block' principle, adopted by the different draft standards, allows for a common core to be specified. This was evidenced in the use of common capabilities such as `/collection` paths and support for bounding box (BBOX) queries.
+
+Additional findings are presented in the following subsections.
 
 === What occurred
 
