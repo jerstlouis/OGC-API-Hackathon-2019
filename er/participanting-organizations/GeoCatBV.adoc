@@ -33,4 +33,4 @@ GeoCat has been constantly an active supporter of OGC and OGC standards, includi
 
 ==== Other Impressions & Recommendations
 
-There was an admirable motivation into creating standards easy to understand and simple. On the other hand, valid remarks were raised on being so strict on OGC API on collection concepts, especially when applied to concepts like processes. This could potentially bring a lower adoption of such standards, also considering the remarkable maturity level.
+There was an admirable motivation into creating standards easy to understand and developer-friendly. Valid remarks were raised on being so strict on OGC API around Collection concept, especially when applied to standards like Processes, where it could seem less intuitive than an Open API approach. The discussions were beneficial in that sense.
