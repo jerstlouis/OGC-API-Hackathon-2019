@@ -7,6 +7,6 @@ Section 6 describes each of the OGC API specifications that were involved in the
 
 Section 7 presents the solution architecture developed in this hackathon. The section identifies the client and service implementations of the OGC API specifications.
 
-Sections 8 and 9 document the results and provide a  of the main findings and discusses alternative approaches that could have been taken, as well as experiences and lessons learnt.
+Sections 8 and 9 document the results and provide a summary of the main findings, as well as discussing the experiences and lessons learnt.
 
 Appendix A provides reports from each participating organisation, covering their motivation for participating, a description of their implementation of the OGC API specifications, alternative approaches, their experiences, impressions and recommendations.

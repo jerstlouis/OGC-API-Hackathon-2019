@@ -6,7 +6,6 @@ The subject of this Engineering Report (ER) is a hackathon event that was held f
 
 // more stuff to add
 // •	business value of this Engineering Report to improve interoperability, advance location-based technologies or realize innovations.
-// •	key findings and results in a concise form
 // •	recommendations on how to further proceed with the standardisation work
 // •	Proposed or agreed follow-on work initiatives
 
