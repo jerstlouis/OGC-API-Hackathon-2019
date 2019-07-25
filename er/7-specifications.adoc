@@ -50,7 +50,10 @@ A summary of the paths offered by the OGC API - Features specification is presen
 * Path = /collections/{collectionId}/items
 ** Returns features of feature collection {collectionId}
 * Path = /collections/{collectionId}/items/{featureId}
-** Returns a feature; using content negotiation to request HTML, GeoJSON or other
+** Returns a feature
+
+Support for HTML and JSON/GeoJSON as encodings is recommended for all resources.
+The specification includes conformance classes for GML (Simple Features profile), too.
 
 === OGC API - Processes
 
