@@ -1,27 +1,42 @@
 [[WestUniversityofTimisoara]]
 === West University of Timisoara
 
+The West University of Timisoara is an universal university from Timisoara, Romania.
+Our http://sage.ieat.ro/[group] is involved in a multitude of research projects spanning from Earth Observation, Machine Learning to Cloud Computing
 
+Participants:
 
-TBA
+* http://www.sage.ieat.ro/p/teodora/[Teodora Selea]
+* http://www.sage.ieat.ro/p/marian/[Marian Neagul]
+* http://www.sage.ieat.ro/p/gabriel/[Gabriel Iuhasz]
+
 
 ==== Motivation to Participate
 
-TBA
+Our participation to the EOEP Hackathon was motivated by our aim of further
+extending the WPS 2.0 server developed as part of the ESA funded EO4SEE Project.
+
+Particularly we are interested in insuring interoperability with third-party WPS
+implementations and adherence to the recommendations originating from the Testbed
+activities.
 
 ==== Implemented Solution
 
-TBA
+As part of the Hackathon we extended EWPS (our server implementation) to support the REST based bindings suggested by the draft standard proposal.
+The implementation was successfully tested with two client implementations, particularly those developed by Solenix and Helyx.
 
 ==== Proposed Alternatives
 
-TBA
+We propose modifying the current proposal to be more REST friendly by adapting WPS 2.0 conventions to RESTful alternatives
 
 ==== Experiences with OGC API Specifications
 
-TBA
+UVT is using OGC WMS, WPS and WCS in research systems.
+
 
 ==== Other Impressions & Recommendations
 
-TBA
+During the hackathon we submitted a series of recommendations regarding the standard, particularly an `callback` or `notification` API that would allow for more micro-service oriented applications.
+The notification API would allow the development of Workflow based (DAG) applications.
 
+Also we suggested extending the `Common API` to provide monitoring information in an implementation agnostic way. This would allow various tools to interoperate in a more friendly manner with OGC compliant services.
