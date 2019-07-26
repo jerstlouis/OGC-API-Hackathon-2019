@@ -1,17 +1,17 @@
 [[GeoCatBV]]
 === GeoCat B.V.
 
-Established in the Netherlands in 2007, GeoCat (https://www.geocat.net) offers cutting-edge customized software and services that make publishing geospatial data on the Internet easier and more efficient. Operating in the fast growing market of Spatial Data Infrastructures (SDI) and geospatial-enabled technologies. GeoCat builds sustainable applications following the Free and Open Source Software (FOSS) philosophy and open standards.
+Established in the Netherlands in 2007, GeoCat (https://www.geocat.net) offers cutting-edge products that make publishing geospatial data on the internet or cloud easier and more efficient. GeoCat customized software and services helps our customers succeed with Spatial Data Infrastructures (SDI) and geospatial-enabled technologies. GeoCat is committed to  sustainable applications with following the principles of free and open source source software and open standards.
 
-Therefore, GeoCat has provided successful consulting services and products that contributed to the development of National Spatial Data Infrastructures for The Netherlands, Switzerland, Norway, Sweden, Finland, Denmark, Scotland, The European Environment Agency, Eurostat and many others.
+GeoCat has an established reputation with our products and services supporting the National Spatial Data Infrastructures for The Netherlands, Switzerland, Norway, Sweden, Finland, Denmark, Scotland, The European Environment Agency, Eurostat and many others.
 
 ==== Motivation to Participate
 
-GeoCat has been an active supporter of OGC and OGC standards continuously. Working with SDI, especially with geospatial catalogues, GeoCat implemented a wide range of OGC standards. GeoCat participated in the GeoNovum testbed for spatial data on the web, from which results were contributed to the final report of the OGC/W3C best practice for spatial data on the web report. Which was taken as the base for the OGC API developments. Having the OGC standards able to connect to standards in the web domain enlarges the audience of spatial data, but also allows us to benefit from research on standards in those domains.
+GeoCat active support of the OGC with a demonstrated commitment to OGC standards both in our particpation in standards development and shipped implementations. Committed to SDI standards, especially with geospatial catalogues, GeoCat has implemented a wide range of OGC standards. GeoCat participated in the GeoNovum testbed for spatial data on the web, from which results were contributed to the final report of the OGC/W3C best practice for spatial data on the web report. This report was taken as the foundation for the OGC API developments. We believe enabling OGC standards to connect to web domain standards enlarges the audience of spatial data, and allows the spatial commuity to benefit from the latest web domain research and innovations.
 
 There is a number of focus areas for GeoCat, especially related to GeoNetwork (https://www.geonetwork-opensource.org), in such events:
 
-- We're looking forward to participate in the next generation of UML, YAML & RDF models for spatial data and how they are exchanged in the scope of OGC API's.
+- We're looking forward to participate in the next generation of UML, YAML & RDF models for spatial data and cartography and how they are exchanged in the scope of OGC API's.
 
 - To collect experience and contribute the discussion to implement support for OAPI Catalog, OAPI Tiles and OAPI Features specifications.
 
@@ -25,7 +25,7 @@ There is a number of focus areas for GeoCat, especially related to GeoNetwork (h
 
 - GeoCat is evaluating how to integrate OAPI Catalog into the GeoNetwork catalog product.
 
-- GeoCat did a pilot to introduce an OAPI Features client in GeoNetwork. 
+- GeoCat completed a pilot to introduce an OAPI Features client into GeoNetwork. 
 
 ==== Experiences with OGC API Specifications
 
@@ -33,4 +33,8 @@ GeoCat has been constantly an active supporter of OGC and OGC standards, includi
 
 ==== Other Impressions & Recommendations
 
-There was an admirable motivation into creating standards easy to understand and developer-friendly. Valid remarks were raised on being so strict on OGC API around Collection concept, especially when applied to standards like Processes, where it could seem less intuitive than an Open API approach. The discussions were beneficial in that sense.
+GeoCat recognized the group's admirable motivation towards creating standards that easy to understand and are developer-friendly.
+
+We recognized valid remarks on the OGC API being very strict around the Colletions concept. This was especially apparent with the OGG API Process where a collections driven approach was markedly less intuitive than an Open API approach.
+
+These discussions are benifitial and lead to a strong standardization process.
