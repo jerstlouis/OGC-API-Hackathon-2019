@@ -1,27 +1,40 @@
 [[GeoCatBV]]
 === GeoCat B.V.
 
+Established in the Netherlands in 2007, GeoCat (https://www.geocat.net) offers cutting-edge products that make publishing geospatial data on the internet or cloud easier and more efficient. GeoCat customized software and services help our customers succeed with Spatial Data Infrastructures (SDI) and geospatial-enabled technologies. GeoCat is committed to sustainable applications with following the principles of free and open-source software and open standards.
 
-
-TBA
+GeoCat has an established reputation with our products and services supporting the National Spatial Data Infrastructures for The Netherlands, Switzerland, Norway, Sweden, Finland, Denmark, Scotland, The European Environment Agency, Eurostat and many others.
 
 ==== Motivation to Participate
 
-TBA
+GeoCat active support of the OGC with a demonstrated commitment to OGC standards both in our participation in standards development and shipped implementations. Committed to SDI standards, especially with geospatial catalogues, GeoCat has implemented a wide range of OGC standards. GeoCat participated in the GeoNovum testbed for spatial data on the web, from which results were contributed to the final report of the OGC/W3C best practice for spatial data on the web report. This report was taken as the foundation for the OGC API developments. We believe enabling OGC standards to connect to web domain standards enlarges the audience of spatial data, and allows the spatial community to benefit from the latest web domain research and innovations.
+
+There is a number of focus areas for GeoCat, especially related to GeoNetwork (https://www.geonetwork-opensource.org), in such events:
+
+- We're looking forward to participating in the next generation of UML, YAML & RDF models for spatial data and cartography and how they are exchanged in the scope of OGC API's.
+
+- To collect experience and contribute the discussion to implement support for OAPI Catalog, OAPI Tiles and OAPI Features specifications.
+
+- Research how existing client tooling (QGIS, OpenLayers, PowerBI, Talend) can benefit from OGC API standards
+
+- Enable crawling by search engines (and humans) of OGC API's, preferably using (extensions to) common ontologies, such as schema.org, dcat, etc.
 
 ==== Implemented Solution
 
-TBA
+- GeoCat contributes to the pygeoapi (https://pygeoapi.io) project, focussing on dataset discovery.
 
-==== Proposed Alternatives
+- GeoCat is evaluating how to integrate OAPI Catalog into the GeoNetwork catalog product.
 
-TBA
+- GeoCat completed a pilot to introduce an OAPI Features client into GeoNetwork. 
 
 ==== Experiences with OGC API Specifications
 
-TBA
+GeoCat has been constantly an active supporter of OGC and OGC standards, including recent efforts on WFS 3.0.
 
 ==== Other Impressions & Recommendations
 
-TBA
+GeoCat recognized the group’s admirable motivation towards creating standards that easy to understand and are developer-friendly.
 
+We recognized valid remarks on the OGC API being very strict around the Collections concept. This was especially apparent with the OGG API Process where a collections driven approach was markedly less intuitive than an Open API approach.
+
+These discussions are beneficial and lead to a strong standardization process.
