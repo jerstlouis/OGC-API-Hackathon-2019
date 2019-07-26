@@ -5,7 +5,12 @@
 
 ==== Motivation to Participate
 
-TBA
+One of 52°North's is core topics is Web-based processing of geospatial data. Currently, 52°North leads the development of the OGC API - Processes within the OGC Web Processing Service 2.0 Standards Working Group. We aimed to use the hackathon:
+
+* to get feedback from developers from inside and outside the OGC,
+* to find any blocking issues,
+* to test our implementation of the Executable Test Suite for the API,
+* to discuss the relationship with the OGC API - Common specification.
 
 ==== Implemented Solution
 
@@ -15,14 +20,87 @@ TBA
 .Swagger Hub page of the OGC API - Processes implementation deployed by 52°North GmbH
 image::images/52n_wps.png[width=800,align="center"]
 
+The implementation is available at http://geoprocessing.demo.52north.org:8080/javaps/rest/
+
+<<img_52n_wps_submit_job>> shows a simple user interface to submit new processing jobs.
+
+[source,]
+----
+URL: http://geoprocessing.demo.52north.org:8080/javaps/rest/processes/org.n52.wps.server.algorithm.SimpleBuffer
+----
+
+[#img_52n_wps_submit_job,reftext='{figure-caption} {counter:figure-num}']
+.User interface to submit new processing jobs to the 52°North javaPS
+image::images/52n_wps_submit_job.png[width=800,align="center"]
+
 ==== Proposed Alternatives
 
-TBA
+The following points were discussed:
+
+===== Align the API to the WPS 2.0 standard
+The OGC API - Processes has its origins in a Public Engineering Report (ER) of the OGC Testbed 12 from 2016. This ER described a REST/JSON binding for WPS 2.0. The JSON schemas were very closely aligned to the WPS 2.0 XML schemas. Since 2016 the JSON schemas were modified, more specifically simplified. This simplification was seen as undesirable by the hackathon attendees. Therefore, the JSON schemas will be aligned with the WPS 2.0 XML schemas again.
+
+Example of JSON schema not aligned: Status info
+
+WPS 2.0 XML StatusInfo element
+[source, XML]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:StatusInfo
+	xmlns:wps="http://www.opengis.net/wps/2.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.opengis.net/wps/2.0 ../wps.xsd">
+
+	<wps:JobID>FB6DD4B0-A2BB-11E3-A5E2-0800200C9A66</wps:JobID>
+	<wps:Status>Accepted</wps:Status>
+	<wps:EstimatedCompletion>2014-12-24T23:00:00Z</wps:EstimatedCompletion>
+	<wps:NextPoll>2014-12-24T16:00:00Z</wps:NextPoll>
+	<wps:PercentCompleted>30</wps:PercentCompleted>
+</wps:StatusInfo>
+----
+
+Corresponding JSON element
+[source, JSON]
+----
+{
+  "status": "accepted",
+  "message": "Process started",
+  "progress": 0,
+  "links": [
+    {
+      "href": "http://processing.example.org/processes/EchoProcess/jobs/81574318-1eb1-4d7c-af61-4b3fbcf33c4f",
+      "rel": "self",
+      "type": "application/json",
+      "title": "this document"
+    }
+  ]
+}
+----
+
+Proposed changes:
+
+* Add element containing JobID 
+* Add element containing EstimatedCompletion
+* Add element containing NextPoll
+
+Another example would be to re-introduce nested inputs to the JSON schema, see this issue: https://github.com/opengeospatial/wps-rest-binding/issues/33
+
+===== Other discussion points
+
+Other discussion points concerned extensions to the API, e.g., an extension that enables specifying callbacks for asynchronous execution or a transactional extension. 
+
+Also, the possibility was discussed to use JSON schema for the process description, instead of using a Swagger/OpenAPI specification. 
+
+In a related discussion, the idea came up to use only OpenAPI to describe WPS, i.e., discard most of the JSON schemas and only use certain building blocks to define a WPS. This approach will be followed in the http://www.opengeospatial.org/projects/initiatives/routingpilot[OGC Routing Pilot]. The results will be discussed at the OGC TC/PC meeting in September.
+
+All discussions are captured in the GitHub issues section: https://github.com/opengeospatial/wps-rest-binding/issues/
 
 ==== Experiences with OGC API Specifications
 
-TBA
+52°North uses the OGC API - Processes in a variety of projects and we think it performs well. The API was and is also heavilly used by other participants e.g. in the OGC Testbeds. The JSON is lightweight and we think that it is better readable than the XML. The links in the JSON let the users/clients easilly find the relevant resources, e.g. from the list of processes to a single process description to the job submission. The HTML encoding also increases usability, e.g., letting the user quickly submit example jobs via a lightweight HTML POST client.
 
 ==== Other Impressions & Recommendations
 
-TBA
+The hackathon was very well organized and it was good to see so many people interested in the API development.
+We would recommend to hold similar hackathons more regularly in order to get developers from outside the OGC involved in the standardization process early.
+The OGC API - Processes now has several implementations and we got valuable comments. This gives us a fresh impuls to continue the work on the API and to eventually finalize it.
