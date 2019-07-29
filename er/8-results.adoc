@@ -213,6 +213,8 @@ Several Technology Integration Experiments (TIE) were completed during the Hacka
 
 |ldproxy | | | | | | | | Features
 
+|ZOO-Project |  |  | | | Processes | | |
+
 |===
 
 NOTE: Services on rows and Clients on columns

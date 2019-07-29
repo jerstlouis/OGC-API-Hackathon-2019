@@ -45,6 +45,10 @@ The Helyx team implemented a WPS 3.0 style API with the primary work completed i
 
 An advantage of the schemaless (and in the future, potentially serverless) approach is the efficiency of the hashing procedure enabling many KVPs to be entered even on a low spec machine. Additionally, this approach has the potential to be made production ready quickly due to the simplicity of the implementation requirements. A future possibility for this piece of work is to implement it using Hazelcast, as it backs up KVPs to a NoSQL database therefore caching the requests and increasing performance accordingly.
 
+==== ZOO-Project
+
+The ZOO-Project product available at www.zoo-project.org is an open-source implementation of both the Web Processing Service (WPS) standard (version 1.0.0 and 2.0) and the OGC API - Processes specification. The ZOO-Kernel is the main component written in C which enables the deployment of geospatial processes, named ZOO-Services that can be implemented in various programming languages (C/C++, Fortran, Java, Python, C#, JavaScript, Perl, R, PHP, Ruby), on the Web in a way that conforms to OGC standards. ZOO-Kernel also supports the deployment of existing Open-Source GIS applications such as OrfeoToolBox and SAGA-GIS. Optionally the execution of OrfeoToolBox applications can be done remotely on a HPC server using SLURM scheduler.
+
 ==== TBA
 
 TBA
