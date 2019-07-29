@@ -45,6 +45,10 @@ The Helyx team implemented a WPS 3.0 style API with the primary work completed i
 
 An advantage of the schemaless (and in the future, potentially serverless) approach is the efficiency of the hashing procedure enabling many KVPs to be entered even on a low spec machine. Additionally, this approach has the potential to be made production ready quickly due to the simplicity of the implementation requirements. A future possibility for this piece of work is to implement it using Hazelcast, as it backs up KVPs to a NoSQL database therefore caching the requests and increasing performance accordingly.
 
+==== ZOO-Project
+
+The ZOO-Project product available at www.zoo-project.org is an open-source implementation of both the Web Processing Service (WPS) standard (version 1.0.0 and 2.0) and the OGC API - Processes specification. The ZOO-Kernel is the main component written in C which enables the deployment of geospatial processes, named ZOO-Services that can be implemented in various programming languages (C/C++, Fortran, Java, Python, C#, JavaScript, Perl, R, PHP, Ruby), on the Web in a way that conforms to OGC standards. ZOO-Kernel also supports the deployment of existing Open-Source GIS applications such as OrfeoToolBox and SAGA-GIS. Optionally the execution of OrfeoToolBox applications can be done remotely on an HPC server using SLURM scheduler.
+
 ==== TBA
 
 TBA
@@ -92,6 +96,166 @@ The QGIS client performs a similar function to the web client, except it is desi
 [#img_computeRoutes2,reftext='{figure-caption} {counter:figure-num}']
 .QGIS Client
 image::images/compute_routes_2.png[width=800,align="center"]
+
+==== ZOO-Project Demonstration Clients
+
+The ZOO-Project provides a Swagger demonstration interface available at https://demo.mapmint.com/swagger-ui/dist.
+
+===== Very Basic OpenLayers Demonstration Interface
+
+A demonstration user interface based on old interfaces available at www.zoo-project.org is available here: https://demo.mapmint.com/examples3/spatialtools.html. You can use it to invoke execution of 4 services using the OGC API - Processes. The data used as input for execution comes from pygeoapi OGC API - Features.
+
+[#img_execute,reftext='{figure-caption} {counter:figure-num}']
+.OpenLayers demonstration client
+image::images/zoo-ol-demo.png[width=800,align="center"]
+
+
+===== OGR base vector operations
+
+From here, you can use the following scenario to run OGR base vector operations:
+
+* Search for Execute EndPoint and click on the green line below (showing "/processes/{id}/jobs").
+* Press the "Try it out" button to display the interface to run an Execute request.
+* Set: "vector-tools.BufferPy" in the process id field then, in the "Request body" part, enter the following content:
+```
+{
+    "inputs": [
+    {
+        "id": "InputPolygon",
+        "input": {
+        "format": {
+            "mimeType": "application/json"
+        },
+        "value": {
+            "href": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items?f=json"
+        }
+        }
+    },
+    {
+        "id": "BufferDistance",
+        "input": {
+                "dataType": {
+            "name": "double"
+                },
+        "value": 0.05
+        }
+    }
+    ],
+    "outputs": [
+    {
+        "id": "Result",
+        "format": {
+        "mimeType": "application/json"
+        },
+        "transmissionMode": "reference"
+    }
+    ]
+}
+```
+* To get directly the json object containing the result directly within the answer you may use the following value for "Request Body":
+```
+{
+    "inputs": [
+	{
+	    "id": "InputPolygon",
+	    "input": {
+		"format": {
+		    "mimeType": "application/json"
+		},
+		"value": {
+		    "href": "https://demo.pygeoapi.io/master/collections/utah_city_locations/items?f=json"
+		}
+	    }
+	},
+	{
+	    "id": "BufferDistance",
+	    "input": {
+                "dataType": {
+		    "name": "double"
+                },
+		"value": 0.05
+	    }
+	}
+    ],
+    "outputs": [
+	{
+	    "id": "Result",
+	    "format": {
+		"mimeType": "application/json"
+	    },
+	    "transmissionMode": "value"
+	}
+    ]
+}
+```
+* To visualize the result, go to ​http://geojson.io and load the result content from there.
+
+
+===== OrfeoToolBox Application example: BandMath
+
+The scenario presented here is the same as the one used for the OGR base vector operations. The only modifications is that it use an image as input data and run an OrfeoToolBox application named BandMath.
+* Search for Execute EndPoint and click on the green line below ("/processes/{id}/jobs").
+* Press the "Try it out" button to display the interface to run an Execute request.
+* Set: "OTB.BandMath" in the process id field, select "respond-async" option in the select list then, in the "Request body" part, please enter the following content:
+```
+{
+    "inputs": [
+        {
+            "id": "il",
+            "input": {
+                "format": {
+                    "mimeType": "image/tiff"
+                },
+                "value": {
+                    "href": "http://geolabs.fr/dl/Landsat8Extract1.tif"
+                }
+            }
+        },
+        {
+            "id": "exp",
+            "input": {
+		"dataType": {
+		    "name": "string"
+		},
+                "value": "im1b1/im1b2"
+            }
+        },
+        {
+            "id": "out",
+            "input": {
+		"dataType": {
+		    "name": "string"
+		},
+                "value": "float"
+            }
+        }
+    ],
+    "outputs": [
+        {
+            "id": "out",
+            "format": {
+                "mimeType": "image/tiff"
+            },
+            "transmissionMode": "reference"
+        }
+    ]
+}
+```
+* Press the "Execute" button down the form. You should identify the line showing the Location header returned by the server (providing the jobId created).
+
+[#img_execute,reftext='{figure-caption} {counter:figure-num}']
+.Swagger client execute
+image::images/execute.png[width=800,align="center"]
+
+
+* You can can either go down the "GetStatus" or "GetResult" section to access the status of your running service or the result (set "OTB.BandMath" in the id field and the returned jobId found in the Location header).
+
+[#img_homepage,reftext='{figure-caption} {counter:figure-num}']
+.Swagger client result
+image::images/result.png[width=800,align="center"]
+
+
+
 
 ==== TBA
 
