@@ -1,27 +1,50 @@
 [[GeoSolutions]]
 === GeoSolutions
 
+GeoSolutions (http://www.geo-solutions.it/) is specialized in the processing and dissemination of raster and vector geospatial data with Open Source software according to the specifications created by Open Geospatial consortium (OGC) and the ISO Technical Committee 211 which provide the base building blocks for the INSPIRE regulations.
 
+The GeoSolutions team is composed by international professionals with leading roles in some of the main Open Source products for the geospatial field like GeoServer, GeoNode, GeoNetwork and MapStore for which GeoSolutions provides professional support services. It is worth to point out that GeoSolutions does not only use Open Source software products mentioned above but actively promote, support, develop and steer the project behind those products. 
 
-TBA
 
 ==== Motivation to Participate
 
-TBA
+* We have participated to the link:http://www.opengeospatial.org/blog/2764[WFS 3.0 hackathon] and want to continue supporting the development of the new wave of OGC APIs, along with their implementation in GeoServer
+* As implementors of a variety of OGC services, including WMS, WFS, WCS, WPS, CSW as well as OpenSearch for EO, we have a direct interest in being part of the defintion of the new set of services that will replace them in the future
+* In particular, as a company dealing with imagery and raster n-dimensional models, there is a strong interest in understanding the future direction of coverage services
+* As implementors of multiple specifications in the same server, participate in the discussion related to API OGC Common to help getting a strong common base that will hopefully reduce implementation efforts 
+* Finally, understand and discuss Tiles and Map API as part of our participation in Testbed 15
 
 ==== Implemented Solution
 
-TBA
+GeoServer WFS 3 had been implemented in GeoServer as prototype community module, but still based around a shared OWS dispatcher to avoid laying down a new architecture based on a single service example. The hackaton provided the occasion to prepare a new base architecture, dedicated to the OGC API services, based on a vision of other service API directions, as well as the formation of the nascent API Common.
+
+The result is a new "OGC API" module divided between a core dispatch subsystem implementing common aspects between the various API, and a much simplified Features API extending it.
+
+This work will be extended in the next few months during Testbed 15 implementing on top of the same base structure a Tiles API, a Styles API, a Image API, along with a dedicated API to collect tiles modified via the Image API, thus further strenghtening the common code base.   
 
 ==== Proposed Alternatives
 
-TBA
+Our participation in the separate thread has been focused on the Coverage API. As others have noticed, the current approach of treating the "collection" as a possibly heterogeneous set of coverages (e.g., accessing a single coverage via ``collection/{collectionId}/coverages/{coverageId}`` raises some doubts in terms of practical usage of the service for the simpler cases.
+There are evident needs of supporting different use cases, including:
+
+* Simple stand-alone rasters, or composite rasters that can be seen, from the eyes of the users, as a single seamless coverage
+* Stitched mosaics where the mosaic/collection can still be managed as a coverage of its own, while giving users access to its internal composition
+* Ensembles/heterogeneous collections where multiple coverages with different physical phenomenon, bands, resolutions are stored, allowing grouping by intended usage, but lacking the possibility of considering the collection itself as a coverage
+
+We believe the subdivision of these use cases in a core specification and extension likely merits some further discussion, involving parties from both API Common and the coverages API.
+
+Another relevant discussion happened during the hackaton relates to the Maps and Tiles API, initially conceived as building blocks that could be added on top of the Features and Coverages API. While this is an important use case, we argued that it's also important to allow creation of stand alone maps and tiles services where collections are opaque and the server is allowed to implement their rendering the desired way (e.g., cascading WMS and WMTS service is a case where the source is not feature nor coverage, standing up a simple mapping service without exposing the actual nature of the source data is another). The specification of Maps and Tiles has since then included the possibility of stand alone usage.   
+
 
 ==== Experiences with OGC API Specifications
 
-TBA
+GeoSolutions has been implementing OGC services in the GeoServer for well over 15 years, ranging between WMS and WMTS (mapping), WFS and WCS (data access), CSW and OpenSearch for EO (catalogues) and WPS (processing). At the same time the same services have been used extensively to provide solutions on the client side.
+
+Our participation in OGC has been growing in the last few years, with active participation in multiple threads of OGC Testbeds, starting with Testbed 12 and continuing to the current date. 
 
 ==== Other Impressions & Recommendations
 
-TBA
+The hackaton has been very helpful to bring all parties interested in OGC specification to discuss the future directions of the various API, confirming a shared approach and allowing each group to consider the concepts and how they apply to their specific service.
+
+For future events we'd recommend a larger amount of time be spent in shared sessions where portions of the API Common can be discussed and their suitability to the various services verified (as opposed to have a dedicated parallel group discussing Common).
 
