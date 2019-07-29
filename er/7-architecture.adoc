@@ -97,13 +97,18 @@ The QGIS client performs a similar function to the web client, except it is desi
 .QGIS Client
 image::images/compute_routes_2.png[width=800,align="center"]
 
-==== ZOO_Project Demonstration Clients
+==== ZOO-Project Demonstration Clients
 
 The ZOO-Project provides a Swagger demonstration interface available at https://demo.mapmint.com/swagger-ui/dist.
 
 ===== Very Basic OpenLayers Demonstration Interface
 
 A demonstration user interface based on old interfaces available at www.zoo-project.org is available here: https://demo.mapmint.com/examples3/spatialtools.html. You can use it to invoke execution of 4 services using the OGC API - Processes. The data used as input for execution comes from pygeoapi OGC API - Features.
+
+[#img_execute,reftext='{figure-caption} {counter:figure-num}']
+.OpenLayers demonstration client
+image::images/zoo-ol-demo.png[width=800,align="center"]
+
 
 ===== OGR base vector operations
 
@@ -237,12 +242,14 @@ The scenario presented here is the same as the one used for the OGR base vector 
 }
 ```
 * Press the "Execute" button down the form. You should identify the line showing the Location header returned by the server (providing the jobId created).
+
 [#img_execute,reftext='{figure-caption} {counter:figure-num}']
 .Swagger client execute
 image::images/execute.png[width=800,align="center"]
 
 
 * You can can either go down the "GetStatus" or "GetResult" section to access the status of your running service or the result (set "OTB.BandMath" in the id field and the returned jobId found in the Location header).
+
 [#img_homepage,reftext='{figure-caption} {counter:figure-num}']
 .Swagger client result
 image::images/result.png[width=800,align="center"]
