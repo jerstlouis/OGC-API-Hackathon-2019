@@ -43,9 +43,7 @@ The current version supports WFS 2.0 instances as well as PostgreSQL/PostGIS dat
 
 The Helyx team implemented a WPS 3.0 style API with the primary work completed in the OGC Routing API Pilot, which is currently on-going. The focus of the component implementation was to produce a schemaless collections endpoint to act as a storage location for data production processes. This could be typical OGC processes in a WPS sent, or with could be in the style of a WFS endpoint.
 
-An advantage of the schemaless (and in the future, potentially serverless) approach is the efficiency of the hashing procedure enabling many KVPs to be entered even on a low spec machine. Additionally, this approach has the potential to be made production ready quickly due to the simplicity of the implementation requirements.
-
-A future possibility for this piece of work is to implement it using Hazelcast, as it backs up KVPs to a NoSQL database therefore caching the requests and increasing performance accordingly.
+An advantage of the schemaless (and in the future, potentially serverless) approach is the efficiency of the hashing procedure enabling many KVPs to be entered even on a low spec machine. Additionally, this approach has the potential to be made production ready quickly due to the simplicity of the implementation requirements. A future possibility for this piece of work is to implement it using Hazelcast, as it backs up KVPs to a NoSQL database therefore caching the requests and increasing performance accordingly.
 
 ==== TBA
 
@@ -80,9 +78,18 @@ The Sinergise OGC Coverages Demo Client is a single-page Javascript application,
 Helyx produced two clients as part of the hackathon, one standalone web client and one QGIS client.
 
 ===== Standalone Web Client
-The purpose of this client was to enable a _walkthough_ of the OGC API to discover processes. The client was able to identify the inputs and outputs of each process, request inputs from the user, execute the WPS and display the result. The purpose of this was to demonstrate the possibilities of clients if OGC APIs were all built to the same specification. If this was the case then clients could likely be universal.
+The purpose of this client was to enable a _walkthough_ of the OGC API to discover processes. The client was able to identify the inputs and outputs of each process, request inputs from the user, execute the WPS and display the result. The purpose of this was to demonstrate the possibilities of clients if OGC APIs were all built to the same specification. If this was the case then clients could likely be universal. Discovery of the processes is shown in <<img_homepage, below>>
 
+[#img_homepage,reftext='{figure-caption} {counter:figure-num}']
+.Web client homepage
+image::images/homepage.png[width=800,align="center"]
 
+===== QGIS Client
+The QGIS client performs a similar function to the web client, except it is designed and built in the QGIS plugin environment. The client walks through the API and identifies processes and parameters to automatically populate the GUI for each process therefore providing the user with well-defined inputs. A full implementation of the QGIS client is currently being produced as part of the OGC Open Routing API Pilot, a screen shot can be found <<img_computeRoutes2>>.
+
+[#img_computeRoutes2,reftext='{figure-caption} {counter:figure-num}']
+.QGIS Client
+image::images/compute_routes_2.png[width=800,align="center"]
 
 ==== TBA
 

@@ -1,24 +1,34 @@
 [[HelyxSIS]]
 === Helyx SIS
 
-Helyx SIS is a professional services company that specialises in the provision of information management and information exploitation, as well as the provision of geospatial information services and solutions. Amongst its professional services, Helyx also undertakes innovation and applied research for customers.
+Helyx SIS is a professional services company that specialises in the provision of information management and information exploitation, as well as the provision of geospatial information services and solutions. Amongst its professional services and on-site support, Helyx also undertakes innovation and applied research for customers.
 
 ==== Motivation to Participate
 
-As well as being an active participant on multiple OGC initiatives, e.g. testbeds, Helyx is also a provider of services to various government departments that are also members of the OGC.
+As well as being an active participant on multiple OGC initiatives, e.g. Testbeds and Pilots, Helyx is also a provider of services to various government departments that are also members of the OGC.
 
 ==== Implemented Solution
 
-Helyx prototyped an implementation of a routing profile of the OGC API - Processes specification, with potential application in transportation.
+Helyx prototyped an implementation of a routing profile of the OGC API - Processes specification. Much of the work going in the hackathon was done as part of the OGC Open Routing API Pilot. This initiative is focused specifically on routing as an application with use cases including online, offline and hybrid connectivity. Additionally, the routing engines in the Pilot are required to support parameters that include; shortest distance, shortest time and algorithms such as the _traveling salesman_ problem. The solution provided a good use case of the OGC API specification including contributing to the debate in the WPS SWG, which is concerned with the role of WPS in the OGC API. In addition to the server side solution, Helyx also produced two different clients; a web based JavaScript client and a QGIS Client built using the QGIS plugin architecture.
 
 ==== Proposed Alternatives
 
-TBA
+No proposed alternatives.
 
 ==== Experiences with OGC API Specifications
 
-TBA
+Helyx has implemented and used several OGC Services in the web services suite and also have implementations for:
+
+* WFS 3.0
+* WPS 3.0 (OGC API)
+
+Our experience with WFS have been largely positive as much of our work has focused on the security aspects of data services. OGC API or WPS has been more challenging as there is a discussion going on within OGC regarding the purpose or utility of the WPS specification. There are currently two schools of thought about WPS within the OGC:
+
+. Use the OpenAPI specification to do Processing
+. Create a facade within OpenAPI to make processing service _look like_ WPS 2.
+
+Each of their approaches have their advantages, option 1 is more flexible, looser and does not impose any well-defined paths or parameters. This means that generic clients are more likely to be able to recognise the _pure_ OpenAPI specification. Option 2 is useful as it reflects the calls done as part of WPS 2 and REST bindings can be created accordingly. The trade off between the two has yet to be resolved.
 
 ==== Other Impressions & Recommendations
 
-TBA
+It appears as though the entire suite of OGC standards will eventually transition to OpenAPI and JSON schemas, although this is far from defined. Perhaps a wider consideration is what this new approach means for architectures in both the OGC overall operating picture and by those utilising GOC standards as part of their own architectures.
