@@ -56,8 +56,10 @@ LuciadLightspeed provides a foundation for advanced geospatial analytics applica
 ==== Solenix WPS Demo Client
 
 The Solenix WPS Demo client is an adaptation of the OGC Testbed 14 client, accounting for some of the changes introduced with the OGC API - Processing.
+The client application runs from a web browser and connects to servers providing the OGC API - Processing.
 
-The client application runs from a web browser.
+A total of 7 servers was connected during the Hackathon, providing the participants with the scenario of a client running in the web browser served via HTTPS and the resulting security rules.
+The client was used during the Hackathon to debug server implementations, and in particular the Cross Origin Resource Sharing (CORS) behavior in web browsers.
 
 ==== Esri OGC API-Tiles Demo Client
 The Esri client application is a simple Leaflet application which connects to the Esri OGC API-Tiles server implementation for testing purposes.

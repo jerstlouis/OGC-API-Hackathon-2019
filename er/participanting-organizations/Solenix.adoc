@@ -1,27 +1,47 @@
 [[Solenix]]
 === Solenix
 
-
-
-TBA
+Solenix is a privately held company providing software engineering and consulting services. Earth Observation and the processing of geospatial information are domains, where all parts of the company are involved for many years already. 
 
 ==== Motivation to Participate
 
-TBA
+As OGC member, Solenix is interested in contributing to standardisation efforts, providing the experience of offering services to major european and national space agencies. 
+As a software engineering company, Solenix is interested in the definition of versatile, practical and focussed APIs, which benefit the OGC, the company's software, and the experience that can be provided to customers.
+
+This Hackathon was a natural fit to participate in the discussion and as platform for learning and exchange of ideas.
 
 ==== Implemented Solution
 
-TBA
+During OGC Testbed 14, Solenix had developed a web based client that allows interacting with WPS servers that used a preliminary REST and JSON binding for communication over HTTP. The OGC API for Processing is essentially an extension of this approach, which was modified in some of the areas.
 
-==== Proposed Alternatives
+During this OGC API Hackathon 2019, Solenix provided, adapted and extended the existing web client in order to account for modifications brought in by the new API. By the end of the Hackathon, a total of 7 servers were connected. Various small issues were discovered and addressed during the Hackathon on the connected server implementations, but of course also in the client itself.
 
-TBA
+The client is purely web based and developed using TypeScript and the Angular framework. Without a server side counterpart that acts as trusted channel, the client communicates with the respective servers directly via the browser. The use of HTTP(S) and JSON via REST interface is thus a natural technological fit, providing most of the tools for processing exchanged data out of the box.
+
+From a security point of view, a browser is a particularly hardened runtime environment, which prefers that all data is received from the same origin, i.e. the same server location. Connecting to services on other servers requires the cooperation and adherence to the imposed rules by both sides to establish communication and safe operation. The most important set of rules is Cross-Origin Resource Sharing (CORS), which allows a server to negotiate the locations and types requests that are available to clients. In close collaboration with the other participants, various specific issues and bugs in the respective use of CORS headers and HTTP statuses were identified, analysed and rectified during the Hackathon, immediately benefiting the server implementers.
+
+The client was also used to exercise the various endpoints as supported by the state of the OGC API for Processing at that stage, including the form generation for request parameters as well as the status display and result download for completed tasks.
 
 ==== Experiences with OGC API Specifications
 
-TBA
+A major part of Processing Track during the Hackathon was dedicated to the discussion of REST based interfaces and the applicable best practices to represent all of the elements as "Resources" with a URL, particularly to express Processes and their lifecycle. 
+
+All of the OGC APIs are intended to build on the OGC Common API, which defines a means for service discovery with a well-known initial structure. Consequently, the Processing API expands on this approach and proposes a structure to describe, announce and find available processes.
+
+Most of the other OGC API standards deal with classical resources, e.g. imagery at a specific location on the globe. Once the representation of data is agreed, data remains clearly identifiable as a resource. The Processing API instead deals with ephemeral resources, e.g. the status of a task while it is running. Resources are thus in a constant flux and require defined behaviour, e.g. an appropriate redirect, once the resource has become obsolete.
+
+During the Hackathon, various means for providing meta-information about processes, their execution and chaining into more complex workflows have been discussed and viewed through the lens of a RESTful interface design.
 
 ==== Other Impressions & Recommendations
 
-TBA
+Participants gained the following two main points directly from using the Solenix client:
 
+1. The correct use of SSL and CORS are absolutely vital for the direct use in web browsers. +
+   In particular, the following points were encountered with some of the server implementations:
+    - The client's location must be allowed to issue requests, i.e. must be an accepted request origin.
+    - The CORS response must contain the appropriate headers, which should be processed by a client. This is particularly important for `HTTP 201 Created` responses, which often indicate to the client where a created resource can be found.
+    - HTTP connections on a client loaded via HTTPS will not succeed. Browsers can be configured to allow such requests, but this is only recommended during development or testing, not for a public-facing deployment.
+2. Handling a large number of processes requires pagination or a higher-level grouping of thematically similar processes. +
+   This was particularly evident when connecting to a server providing over 1500 processes, which required a long time to load and led to a unruly overview list. The search functionality provided by the client was useful to pinpoint specific processes, but should only be seen as workaround to the described issue.
+
+Both observations were also highlighted and discussed briefly during the presentation of the Solenix client towards the end of the Hackathon.
