@@ -39,6 +39,14 @@ is placed on an intuitive HTML representation.
 
 The current version supports WFS 2.0 instances as well as PostgreSQL/PostGIS databases as backends. It implements all conformance classes and recommendations of "OGC API - Features - Part 1: Core" plus a number of experimental OGC API Features extensions (CRS support, /items path, property selection, geometry simplification, transactions, dynamic links, and more). ldproxy also has draft implementations for additional resource types (Tiles, Styles).
 
+==== Helyx SIS
+
+The Helyx team implemented a WPS 3.0 style API with the primary work completed in the OGC Routing API Pilot, which is currently on-going. The focus of the component implementation was to produce a schemaless collections endpoint to act as a storage location for data production processes. This could be typical OGC processes in a WPS sent, or with could be in the style of a WFS endpoint.
+
+An advantage of the schemaless (and in the future, potentially serverless) approach is the efficiency of the hashing procedure enabling many KVPs to be entered even on a low spec machine. Additionally, this approach has the potential to be made production ready quickly due to the simplicity of the implementation requirements.
+
+A future possibility for this piece of work is to implement it using Hazelcast, as it backs up KVPs to a NoSQL database therefore caching the requests and increasing performance accordingly.
+
 ==== TBA
 
 TBA
@@ -66,6 +74,15 @@ The Esri client application is a simple Leaflet application which connects to th
 ==== Sinergise OGC Coverages Demo Client
 
 The Sinergise OGC Coverages Demo Client is a single-page Javascript application, using Leaflet.js to show the data from different backends. Support for two different backends was implemented, Rasdaman and EOX IT Services. The frontend is available at http://webdev.sentinel-hub.com/ogc-hackathon/index.html (view source for additional info).
+
+==== Helyx SIS Demonstration Clients
+
+Helyx produced two clients as part of the hackathon, one standalone web client and one QGIS client.
+
+===== Standalone Web Client
+The purpose of this client was to enable a _walkthough_ of the OGC API to discover processes. The client was able to identify the inputs and outputs of each process, request inputs from the user, execute the WPS and display the result. The purpose of this was to demonstrate the possibilities of clients if OGC APIs were all built to the same specification. If this was the case then clients could likely be universal.
+
+
 
 ==== TBA
 
