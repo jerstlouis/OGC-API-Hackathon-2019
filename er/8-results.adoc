@@ -78,6 +78,7 @@ As discussed in <<Architecture>>, the software products that were deployed by th
 * Solenix WPS Demo Client
 * Esri OGC API-Tiles Demo Client
 * ldproxy
+* Helyx server, web clients and QGIS Desktop client
 
 The deployed technologies includes software implemented in C, {cpp} , Python, Java, and NodeJS. Some of the deployed technologies include Python adapters to software implemented in {cpp}. This variety of programming languages shows that the OGC API specifications are independent of any programming language.
 
@@ -204,7 +205,7 @@ Several Technology Integration Experiments (TIE) were completed during the Hacka
 
 |Spacebel |  |   | Features, Catalogue | | Processes | | |
 
-|West University of Timisoara | | | | | Processes | | |
+|West University of Timisoara | |Processes | | | Processes | | |
 
 |rasdaman | | | | | | Coverages | Coverages |
 
