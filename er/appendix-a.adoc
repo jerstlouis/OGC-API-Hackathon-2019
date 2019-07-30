@@ -122,3 +122,5 @@ include::participanting-organizations/UniversityofNotreDame.adoc[]
 include::participanting-organizations/WebGeoDataVore.adoc[]
 
 include::participanting-organizations/WestUniversityofTimisoara.adoc[]
+
+include::participanting-organizations/ZOOProject.adoc[]
