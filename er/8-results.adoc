@@ -65,7 +65,7 @@ The hackathon was therefore organized around teams based on the OGC API specific
 
 ==== Technology
 
-The client and service applications were bound together through interfaces conforming to the OGC APIs for Map Tiles, Processes, Features, Catalogues, and Coverages. The client applications included software from Hexagon, Helyx, OpenSphere, Esri, Solenix, EURAC and Sinergise. The service applications included software from 52 North, CubeWerx, Esri, Helyx, pygeoapi, Geoserver, Spacebel, West University of Timisoara, rasdaman, and interactive instruments. The variety of software implementations suggests that the OGC API specifications widely implementable and do not depend on any single vendor’s technology.
+The client and service applications were bound together through interfaces conforming to the OGC APIs for Map Tiles, Processes, Features, Catalogues, and Coverages. The client applications included software from Hexagon, Helyx, OpenSphere, Esri, Solenix, EURAC and Sinergise. The service applications included software from 52 North, CubeWerx, Esri, Helyx, pygeoapi, Geoserver, Spacebel, West University of Timisoara, rasdaman, interactive instruments, and EOX. The variety of software implementations suggests that the OGC API specifications widely implementable and do not depend on any single vendor’s technology.
 
 As discussed in <<Architecture>>, the software products that were deployed by the aforementioned organizations included:
 
@@ -80,6 +80,7 @@ As discussed in <<Architecture>>, the software products that were deployed by th
 * ldproxy
 * Helyx server, web clients and QGIS Desktop client
 * ZOO-Project
+* EOxServer
 
 The deployed technologies includes software implemented in C, {cpp} , Python, Java, and NodeJS. Some of the deployed technologies include Python adapters to software implemented in {cpp}. This variety of programming languages shows that the OGC API specifications are independent of any programming language.
 
@@ -161,16 +162,17 @@ The participants https://github.com/opengeospatial/OGC-API-Map-Tiles/issues/14[o
 
 The participants agreed that OGC API - Coverages should inherit from OGC API - Common as much as possible. This meant that wherever a requirement is specified in OGC API - Common, if it is applicable to coverages, the OGC API - Coverages specification would reference the requirement in the OGC API - Common specification.
 
-The participants agreed that a request for the coverages path would return a list of all  of the coverage identifiers included in the collection.
+The participants agreed that a request for the coverages path would return a list of all of the coverage identifiers included in the collection.
 
 There was also agreement that a request for the coverage description would only return the essential information instead of the complete metadata associated with the coverage.
 
-There was discussion about how to support bounding box (BBOX) filters on multidimensional coverages. The participants expressed the need to inherit the BBOX and time parameters from OGC API - Common, however also they also observed that there would be a need to identify a CRS for height. One of the suggestions was for each axis to have a separate coverage filter. The participants concluded that there is currently no construct in the Core part of the OGC API - Common specification that supports filtering of coverages.
+There was discussion about how to support bounding box (BBOX) filters on multidimensional coverages. The participants expressed the need to inherit the BBOX and time parameters from OGC API - Common, however they also observed that there would be a need to identify a CRS for height. One of the suggestions was for each axis to have a separate coverage filter. The participants concluded that there is currently no construct in the Core part of the OGC API - Common specification that supports filtering of coverages.
 
-The was discussion about the retrieval of coverages. The OGC API - Coverages specification was updated to allow for different ways for getting the coverages individually. Since not every format is suitable for transferring all of the coverage information, participants identified different ways for getting the different types of coverages. It was also noted that for applications that do not want to use collections, they can just use the `coverages/{coverageid}` path.
+There was discussion about the retrieval of coverages. The OGC API - Coverages specification was updated to allow for different ways for getting the coverages individually. Since not every format is suitable for transferring all of the coverage information, participants identified different ways for getting the different types of coverages. It was also noted that for applications that do not want to use collections, they can just use the `coverages/{coverageid}` path.
 
 There was a discussion about whether parameters, values and URL bases were case sensitive. This issue was observed to be applicable to all of the specifications. There was a suggestion that the OGC API - Common specification should specify a rule for case sensitivity and that that rule should be consistent with the RFC.
 
+All discussion points that could not be resolved where recorded as GitHub issues like https://github.com/opengeospatial/oapi_common/issues/29 or https://github.com/opengeospatial/oapi_common/issues/36.
 
 === OGC API - Common
 

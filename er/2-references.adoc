@@ -3,7 +3,7 @@
 
 The following normative documents are referenced in this document.
 
-.NOTE: 	Only normative standards are referenced here, e.g. OGC, ISO or other SDO standards. All other references are listed in the bibliography. Example:
+.NOTE: 	Only normative standards are referenced here, e.g. OGC, ISO or other SDO standards. All other references are listed in the bibliography.
 
 * https://portal.opengeospatial.org/files/?artifact_id=38867&version=2[OGC: OGC 06-121r9, OGC® Web Services Common Standard]
 * http://docs.opengeospatial.org/DRAFTS/17-069r2.html[OGC: OGC 17-069r2, OGC API - Features - Part 1: Core, Version 1.0.0-draft.2 (release candidate)]
