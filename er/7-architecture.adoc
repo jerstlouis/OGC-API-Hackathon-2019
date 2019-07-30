@@ -89,21 +89,7 @@ The Sinergise OGC Coverages Demo Client is a single-page Javascript application,
 
 ==== Helyx SIS Demonstration Clients
 
-Helyx produced two clients as part of the hackathon, one standalone web client and one QGIS client.
-
-===== Standalone Web Client
-The purpose of this client was to enable a _walkthough_ of the OGC API to discover processes. The client was able to identify the inputs and outputs of each process, request inputs from the user, execute the WPS and display the result. The purpose of this was to demonstrate the possibilities of clients if OGC APIs were all built to the same specification. If this was the case then clients could likely be universal. Discovery of the processes is shown in <<img_homepage, below>>
-
-[#img_homepage,reftext='{figure-caption} {counter:figure-num}']
-.Web client homepage
-image::images/homepage.png[width=800,align="center"]
-
-===== QGIS Client
-The QGIS client performs a similar function to the web client, except it is designed and built in the QGIS plugin environment. The client walks through the API and identifies processes and parameters to automatically populate the GUI for each process therefore providing the user with well-defined inputs. A full implementation of the QGIS client is currently being produced as part of the OGC Open Routing API Pilot, a screen shot can be found <<img_computeRoutes2>>.
-
-[#img_computeRoutes2,reftext='{figure-caption} {counter:figure-num}']
-.QGIS Client
-image::images/compute_routes_2.png[width=800,align="center"]
+Helyx produced two clients as part of the hackathon, one standalone web client and one QGIS client. The Standalone Web Client was implemented with the purpose of providing a _walkthough_ of the OGC API to discover processes. The web client, which was implemented using JavaScript, was able to identify the inputs and outputs of each process, request inputs from the user, execute a process and display the result. The QGIS client performed a similar function to the web client, except it was designed and built in the QGIS plugin environment. The QGIS client walks through the API and identifies processes and parameters to automatically populate the Graphical User Interface (GUI) for each process therefore providing the user with well-defined inputs. 
 
 ==== ZOO-Project Demonstration Clients
 

@@ -11,6 +11,20 @@ As well as being an active participant on multiple OGC initiatives, e.g. Testbed
 
 Helyx prototyped an implementation of a routing profile of the OGC API - Processes specification. Much of the work going in the hackathon was done as part of the OGC Open Routing API Pilot. This initiative is focused specifically on routing as an application with use cases including online, offline and hybrid connectivity. Additionally, the routing engines in the Pilot are required to support parameters that include; shortest distance, shortest time and algorithms such as the _traveling salesman_ problem. The solution provided a good use case of the OGC API specification including contributing to the debate in the WPS SWG, which is concerned with the role of WPS in the OGC API. In addition to the server side solution, Helyx also produced two different clients; a web based JavaScript client and a QGIS Client built using the QGIS plugin architecture.
 
+===== Standalone Web Client
+The purpose of this client was to enable a _walkthough_ of the OGC API to discover processes. The client was able to identify the inputs and outputs of each process, request inputs from the user, execute the WPS and display the result. The purpose of this was to demonstrate the possibilities of clients if OGC APIs were all built to the same specification. If this was the case then clients could likely be universal. Discovery of the processes is shown in <<img_homepage, below>>
+
+[#img_homepage,reftext='{figure-caption} {counter:figure-num}']
+.Web client homepage
+image::images/homepage.png[width=800,align="center"]
+
+===== QGIS Client
+The QGIS client performs a similar function to the web client, except it is designed and built in the QGIS plugin environment. The client walks through the API and identifies processes and parameters to automatically populate the GUI for each process therefore providing the user with well-defined inputs. A full implementation of the QGIS client is currently being produced as part of the OGC Open Routing API Pilot, a screen shot can be found <<img_computeRoutes2>>.
+
+[#img_computeRoutes2,reftext='{figure-caption} {counter:figure-num}']
+.QGIS Client
+image::images/compute_routes_2.png[width=800,align="center"]
+
 ==== Proposed Alternatives
 
 No proposed alternatives.
