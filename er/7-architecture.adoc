@@ -49,6 +49,14 @@ An advantage of the schemaless (and in the future, potentially serverless) appro
 
 The ZOO-Project product available at www.zoo-project.org is an open-source implementation of both the Web Processing Service (WPS) standard (version 1.0.0 and 2.0) and the OGC API - Processes specification. The ZOO-Kernel is the main component written in C which enables the deployment of geospatial processes, named ZOO-Services that can be implemented in various programming languages (C/C++, Fortran, Java, Python, C#, JavaScript, Perl, R, PHP, Ruby), on the Web in a way that conforms to OGC standards. ZOO-Kernel also supports the deployment of existing Open-Source GIS applications such as OrfeoToolBox and SAGA-GIS. Optionally the execution of OrfeoToolBox applications can be done remotely on an HPC server using SLURM scheduler.
 
+==== EOxServer
+
+EOxServer (http://eoxserver.org) was started more than 10 years ago as a reference implementation of WCS in particular the Earth Observation Application Profile (EO-WCS).
+
+Support for the OGC API - Coverages draft was implemented in EOxServer in the OpenAPI branch (https://github.com/EOxServer/eoxserver/tree/openapi).
+
+A demonstration using the provided Sentinel-2 data is available online at https://ows.eox.at/openapi/ and integrated in the Sinergise OGC Coverages Demo Client.
+
 ==== TBA
 
 TBA
@@ -77,7 +85,7 @@ The Esri client application is a simple Leaflet application which connects to th
 
 ==== Sinergise OGC Coverages Demo Client
 
-The Sinergise OGC Coverages Demo Client is a single-page Javascript application, using Leaflet.js to show the data from different backends. Support for two different backends was implemented, Rasdaman and EOX IT Services. The frontend is available at http://webdev.sentinel-hub.com/ogc-hackathon/index.html (view source for additional info).
+The Sinergise OGC Coverages Demo Client is a single-page Javascript application, using Leaflet.js to show the data from different backends. Support for two different backends was implemented, Rasdaman and EOxServer from EOX IT Services GmbH. The frontend is available at http://webdev.sentinel-hub.com/ogc-hackathon/index.html (view source for additional info).
 
 ==== Helyx SIS Demonstration Clients
 

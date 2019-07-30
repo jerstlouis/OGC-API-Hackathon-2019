@@ -1,27 +1,40 @@
 [[EOXITServicesGmbH]]
 === EOX IT Services GmbH
 
+EOX IT Services GmbH (https://eox.at) offers solutions and services in the geodata domain in general and in the Earth Observation domain in particular (https://eox.at/software-products/).
 
+EOX is strongly committed towards utilizing and contributing to Open Source Software for example via the EOX GitHub organization (https://github.com/eox-a).
 
-TBA
+EOX is further committed to comply to and improve Open Standards particularly those of the Open Geospatial Consortium (OGC) (http://www.opengeospatial.org/).
+
+EOX is your technology partner of choice in major European environment monitoring and space programs like the European Copernicus initiative (http://www.copernicus.eu/).
+
+The participants from EOX are Fabian Schindler, lead developer of EOxServer, and Stephan Meissl, co-chair of the Coverages DWG and WCS SWG at OGC.
 
 ==== Motivation to Participate
 
-TBA
+EOX' main motivation is to actively contribute to the next generation of OGC standards. The EOX team wants to bring in their expertise gathered over the years in implementing current and previous OGC standards like WMS, WMTS, WCS, WPS, OpenSearch, etc.
+
+Also EOX wants to make sure that Coverages do not fall behind and get hopefully more usable. In particular, client implementers hopefully have a greatly improved experience.
 
 ==== Implemented Solution
 
-TBA
+EOX implemented the OGC API - Coverages draft in EOxServer in the OpenAPI branch (https://github.com/EOxServer/eoxserver/tree/openapi).
+
+A demonstration using the provided Sentinel-2 data is available online at https://ows.eox.at/openapi/
 
 ==== Proposed Alternatives
 
-TBA
+The work on OGC API - Coverages needs to address also performance requirements. While it is a great feature to support arbitrary subsetting requests, allowing servers to tell clients which subsets are served with optimum performance is needed. Something similar to WMTS in the WMS/WMTS pair is missing for WCS.
+
+It became quite clear during the hackathon that simply adding OpenAPI as an alternate protocol binding to WCS 2 is not enough. Core concepts need to be added, like grouping into collections, or reviewed and potentially revised, like requesting output format specifics.
 
 ==== Experiences with OGC API Specifications
 
-TBA
+EOX has from the beginning been committed to comply to and improve OGC standards. EOX is a longstanding associate member of OGC and actively contributes to the Coverages DWG and WCS SWG work for example with editing EO-WCS and providing reference implementations as well as in various testbeds.
+
+Starting more than 10 years ago mainly with server side implementations recently more and more client side development is done like EOxC (https://github.com/eoxc) or geotiff.js (https://geotiffjs.github.io).
 
 ==== Other Impressions & Recommendations
 
-TBA
-
+The hackathon was great to bring representatives from the various groups at OGC around the table to get to a common understanding and identify future directions. Working together on the common understanding specified in OGC API - Common should continue and buy-in from all groups representing the various resources like features, maps, tiles, processes, coverages, etc. is crucial to the success of the next generation of OGC standards. This task needs to take into account the various stages different standard drafts are in making it not an easy task.
