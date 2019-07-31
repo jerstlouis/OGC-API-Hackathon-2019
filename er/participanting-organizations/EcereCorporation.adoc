@@ -1,27 +1,75 @@
 [[EcereCorporation]]
 === Ecere Corporation
 
-
-
-TBA
+http://ecere.ca[Ecere Corporation] has been supporting the OGC API development through participation in various Innovation Program activities (e.g. Testbeds, Vector Tiles and Routing pilots) and working groups.
+Ecere offers the http://ecere.ca/gnosis[GNOSIS] cross-platform geospatial visualization tools, leveraging GPU hardware acceleration with support for 3D, Augmented, Virtual and Mixed Reality.
+The technology is built on top of its open-source cross-platform http://ecere.org[Ecere SDK] and http://ec-lang.org[eC programming language].
+As part of its geospatial suite, Ecere offers a map server, a GIS tool as well as a Software Development Kit with support for OGC services (from both the client and server sides).
 
 ==== Motivation to Participate
 
-TBA
+We feel the most important goal that the OGC API has the potential to achieve is unifying access to different types of geospatial data through a modular, simple and consistent interface.
+We are of the opinion that the great variability and separate nature of classic OGC services types (WFS and WCS in particular being completely distinct from W(M)TS) has
+been problematic and holding back direct access to raw data.
+The OGC API can address these issues, making it much easier to work with raw data and therefore enabling more efficient and more flexible client-side maps rendering,
+which is especially important for 3D views.
+As a result of our work on http://docs.opengeospatial.org/per/17-041.html[Vector Tiles in Testbed 13], we had proposed back in 2017 the concept of a http://maps.ecere.com/ums[Unified Map Service (UMS)]
+as a very simple example of how these challenges might be addressed.
+
+For these reasons, we were keen to participate in this hackathon.
+Our focus during the hackathon has been on contributing ideas and suggesting ways the modularity (building blocks approach) and consistency for different geospatial
+data types (vector features, coverages -- gridded in particular, imagery) can be maintained.
+We primarily interacted with the Maps and Tiles group, as well as the Processes group.
+
+We also wanted to take the opportunity to complete support for the OGC API in the newest iteration of our GNOSIS geospatial software (both clients and services).
 
 ==== Implemented Solution
 
-TBA
-
-==== Proposed Alternatives
-
-TBA
+During the hackathon, we made great strides of progress towards our new OGC API service and clients, which we have continued improving since.
+The latest version of our experimental service is hosted at http://maps.ecere.com/geoapi/ and our client applications are being used in OGC Innovation Program activities
+such as the Routing pilot and Testbed 15, for which demonstration videos will likely be published as the initiatives conclude.
 
 ==== Experiences with OGC API Specifications
 
-TBA
+We have previously implemented server-side support for WMTS and WFS, and client-side support for WMS, WMTS and WFS.
+We also regularly attend Technical Committee meetings and participated in several OGC Innovation Program initiatives.
+We are looking forward to fully supporting all of the common modular blocks of the new OGC API, and hope to achieve compliance as the specifications are finalized.
 
 ==== Other Impressions & Recommendations
+On the topics of Map and Tiles, we were strongly recommending to split them as separate building blocks: Maps, and Tiles.
 
-TBA
+This is because Tiles can be used to deliver data, whether it is a rendered map, vector features or a gridded coverage.
+And rendering maps can be used independently from tiles.
+We are happy that the specifications seems to be heading this way.
+We also highlighted the fact that rendering Maps on the server is in fact a process, and that a good Processes API should easily be usable for the foundation of such a Maps API.
+The characteristics of such a Process API would also be beneficial, in many other use cases, as described below.
 
+We submitted a https://github.com/opengeospatial/wps-rest-binding/issues/47[new idea] to the OGC API - Processes GitHub repository, discussing how we could achieve
+highly scalable, chainable and flexible processes centered around 'Collections' as inputs & outputs.
+
+One might see a process as acting on 0, 1 or multiple "collection" (data) input, possibly in addition to parameters, and outputs 0, 1 or multiple "collection" (data) outputs.
+
+In addition to nicely tying OGC API - Processes with Features and Coverages, it makes daisy chaining very easy to accomplish.
+
+The "data delivery" building blocks (e.g. Features & Coverages) provide the mechanisms by which to identify "collections" of vector features or grid cells (data), and retrieve them. Built-in space partitioning mechanism such as bounding boxes or more complex sub-setting can be used to efficiently retrieve part of the data, or special building blocks such as Tiles or DGGS can offer additional exchange mechanisms. This makes processes highly scalable as different tiles, DGGS cells or subsets of the data could be processed in a massively parallel manner, all through a potential chain of processes. The specific space partitioning modular API blocks (e.g. Tiles or DGGS cell), or the base Features/Coverage mechanisms can be negotiated at any exchange level throughout the chain.
+
+Since it seems that we have to stick with the generic but loaded term of "collections" for e.g. OGC API - Features, I think it would be a mistake to overload the term of "collection" with a meaning other than a "set of geospatial data with particular characteristics", such as a generic group of things (e.g. a list of available processes). One can imagine the confusion if what OGC processes do is act on "collections", while "collection" is also used to mean a regrouping of multiple processes.
+
+A simple example is vectorization of a digital elevation model.
+You have a collection representing a DEM (it is important here that the level of a "collection" should represent a "collection of gridded cells", not a collection of a collection of gridded cells, unless said collection of collections is intended to be treated as if the cells were all together in one single DEM layer).
+This is your input collection to a "vectorization" process.
+You invoke it with parameters, and you get a "vector" collection back.
+You can then chain another process working on a vector collection.
+
+It can also be seen that rendering a "map" (as in the Maps API) is clearly a process rendering 1 or more "collections", taking a style as parameter, and producing an imagery ((A)RGB natural color image) "collection" as an output (the rendered map). The result can be retrieved through various data partitioning mechanism (e.g. bounding box, or tiles), and the process can be optimized to render portions as required, cached, in parallel, etc.
+
+We think it makes a lot of sense for OGC API - Processes to support both synchronous (POST and get the 200 output result) and asynchronous modes, Maps and Routes being an important example of how this is useful for simple POST requests returning an output collection (e.g. a route or rendered map) right away.
+
+There could be standardized "well known" processes such as the Maps Rendering process, the Routing process (open routing pilot), Vectorization process, etc, which would further greatly enhance interoperability and chainability of different processes. Most processes would also provide the output in a "collection" interface, which any other process, data delivery, or geospatial viewer supporting the OGC API would readily support.
+This also makes it possible to only process data on an as-needed basis, e.g. when first visualizing the output (or being requested by further down the raw data-process-visualization daisy chain) for a certain area or resolution level.
+
+The concept of workflow could be simply described as a chain of OGC API resources and parameters. The actual communication between any 2 services in the chain can be negotiated (e.g. supporting tiles, supporting DGGS, supported data formats), and need not be included in that workflow description, so that alternate implementations with different support could apply the same workflow.
+
+All this makes for a great universal geospatial processing framework by which all processes and data collections become readily compatible, and one can easily discover and combine data sets from all over and using processes hosted anywhere.
+
+Additional background can be found in https://github.com/opengeospatial/oapi_common/issues/17[another idea submitted to the OpenAPI Common repository].

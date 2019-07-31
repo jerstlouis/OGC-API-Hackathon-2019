@@ -57,6 +57,13 @@ Support for the OGC API - Coverages draft was implemented in EOxServer in the Op
 
 A demonstration using the provided Sentinel-2 data is available online at https://ows.eox.at/openapi/ and integrated in the Sinergise OGC Coverages Demo Client.
 
+==== GNOSIS Map Server
+
+The http://ecere.ca/gnosis[GNOSIS Map Server] is written in the http://ec-lang.org[eC programming language] and currently implements WMTS, WFS, as well as prototyped support for the new OGC API.
+It supports multiple encoding including http://ecere.com/gmt.pdf[GNOSIS Map Tiles] (which can contain either vector data, gridded coverages, imagery, point clouds or 3D meshes),
+Mapbox Vector Tiles, GeoJSON, GeoECON, GML and MapML.
+An experimental server is available online at http://maps.ecere.com/geoapi and used for interoperability experiments in multiple OGC initiatives.
+
 ==== TBA
 
 TBA
@@ -95,7 +102,12 @@ Helyx produced two clients as part of the hackathon, one standalone web client a
 
 The ZOO-Project provided a Swagger demonstration interface which can be found at https://demo.mapmint.com/swagger-ui/dist. A demonstration user interface based on interfaces available at www.zoo-project.org was also provided. It is available here: https://demo.mapmint.com/examples3/spatialtools.html. It can be used to invoke execution of 4 services using the OGC API - Processes. The ZOO-Project also provided an https://www.orfeo-toolbox.org[Orfeo ToolBox] application named BandMath. Orfeo ToolBox is an open-source project for state-of-the-art remote sensing, including a fast image viewer, apps callable from Bash, Python or QGIS, and a powerful C++ API.
 
+==== GNOSIS Software Development Kit
 
+The http://ecere.ca/gnosis[GNOSIS Software Development Kit] is written in the http://ec-lang.org[eC programming language] and currently implements client support for WMS, WMTS, WFS, as well as prototyped support for the new OGC API.
+Through an automated bindings generator part of the open-source Ecere SDK, the GNOSIS SDK is also made available to a growing list of other programming languages currently
+including C, C++ and Python.
+Clients written with the GNOSIS SDK, such GNOSIS Cartographer, can render styled geospatial views using cartographic or 3D perspective projections, with support for Virtual, Augmented and Mixed Reality.
 
 ==== TBA
 

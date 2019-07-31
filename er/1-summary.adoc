@@ -60,6 +60,7 @@ All questions regarding this document should be directed to the editor or the co
 |Alexander Jacob | Eurac Research | Contributor
 |Brian Osborn | CACI | Contributor
 |Robert St. John | CACI | Contributor
+|Jerome St-Louis | Ecere | Contributor
 |TBA | TBA | Contributor
 |TBA | TBA | Contributor
 |TBA | TBA | Contributor

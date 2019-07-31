@@ -65,7 +65,7 @@ The hackathon was therefore organized around teams based on the OGC API specific
 
 ==== Technology
 
-The client and service applications were bound together through interfaces conforming to the OGC APIs for Map Tiles, Processes, Features, Catalogues, and Coverages. The client applications included software from Hexagon, Helyx, OpenSphere, Esri, Solenix, EURAC and Sinergise. The service applications included software from 52 North, CubeWerx, Esri, Helyx, pygeoapi, Geoserver, Spacebel, West University of Timisoara, rasdaman, interactive instruments, and EOX. The variety of software implementations suggests that the OGC API specifications widely implementable and do not depend on any single vendor’s technology.
+The client and service applications were bound together through interfaces conforming to the OGC APIs for Map Tiles, Processes, Features, Catalogues, and Coverages. The client applications included software from Hexagon, Helyx, OpenSphere, Esri, Solenix, EURAC and Sinergise. The service applications included software from 52 North, CubeWerx, Esri, Helyx, pygeoapi, Geoserver, Spacebel, West University of Timisoara, rasdaman, interactive instruments, EOX, and Ecere. The variety of software implementations suggests that the OGC API specifications widely implementable and do not depend on any single vendor’s technology.
 
 As discussed in <<Architecture>>, the software products that were deployed by the aforementioned organizations included:
 
@@ -81,8 +81,9 @@ As discussed in <<Architecture>>, the software products that were deployed by th
 * Helyx server, web clients and QGIS Desktop client
 * ZOO-Project
 * EOxServer
+* Ecere's GNOSIS Map Server, SDK and Client (Cartographer)
 
-The deployed technologies includes software implemented in C, {cpp} , Python, Java, and NodeJS. Some of the deployed technologies include Python adapters to software implemented in {cpp}. This variety of programming languages shows that the OGC API specifications are independent of any programming language.
+The deployed technologies includes software implemented in C, {cpp}, eC, Python, Java, and NodeJS. Some of the deployed technologies include Python adapters to software implemented in {cpp}. This variety of programming languages shows that the OGC API specifications are independent of any programming language.
 
 ==== Information
 
@@ -142,12 +143,18 @@ There was a https://github.com/opengeospatial/wps-rest-binding/issues/31[suggest
 
 There was a https://github.com/opengeospatial/wps-rest-binding/issues/32[suggestion] to add the exception information to the status information at GET `/processes/{id}/jobs/{jobID}` and remove the GET `/processes/{id}/jobs/{jobID}/exception` endpoint. The participants considered whether an HTTP 201 code should be returned with POST /processes/{id}/jobs. The participants resolved that allowing for plural form results could address this issue, for example `processes/{processId}/jobs/{jobId}/results/{resultId}`. Use of an HTTP 201 code was however inconclusive.
 
+There was a https://github.com/opengeospatial/wps-rest-binding/issues/47[suggestion] for highly scalable, chainable and flexible processes centered around 'Collections' as inputs & outputs.
 
-=== OGC API - Map Tiles
+
+=== OGC API - Maps and Tiles
 
 The participants identified three roots for API building blocks, namely the root of the service, collection ID, and collection ID combined the coverage ID. A need to combine these root paths with maps and tiles was identified. There was an observation made that if the roots are combined with maps and tiles, there is an opportunity to provide much more information through data tiles such as vector tiles or coverage tiles. There was also an observation made that if a style and style id are concatenated with the path then the API would be able to combine data tiles with portrayals of the information. There was a third alternative identified, which is the concatenation of both the aforementioned approaches.
 
 These paths have specific query parameters associated with them. Participants observed that such a capability may not be fully supported by OpenAPI 3.0.
+
+There was a discussion about Maps and Tiles being separate building blocks which can be used independently (e.g. together with either Features and/or Coverages), or in combination with each other.
+
+There was a discussion about Maps being in fact a Process taking in one or more collections (which could be collections of vector features, coverages -- collections of gridded cells, or images -- collections of (A)RGB pixels) as inputs, parameters such as styles and producing an (A)RGB image "collection" as an output.
 
 There was a discussion about whether the response for maps should return raster or vector maps. Related to this was whether a map was at the same level as a collection. There was agreement that maps are not at the same level as collections.
 
